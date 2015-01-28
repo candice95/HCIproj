@@ -15,7 +15,8 @@ $('#student').click(function(){
             display:'none'
         }),
         login = $('<button id="login" class="btn">Log in</button>').css({
-        	position: 'relative'
+        	position: 'relative',
+            display: 'none'
         });
 
     
@@ -25,6 +26,7 @@ $('#student').click(function(){
         wrapper.prepend(back, next, login);
         back.show().animate({marginLeft:0},200);
         next.show().animate({marginLeft:0},800);
+        login.show().animate({marginLeft:0},800);
     });
 });
 
@@ -43,7 +45,8 @@ $('#prof').click(function(){
             display:'none'
         }),
         login = $('<button id="login" class="btn">Log in</button>').css({
-        	position: 'relative'
+        	position: 'relative',
+            display: 'none'
         });
 
     current.fadeOut(200, function() {
@@ -52,6 +55,7 @@ $('#prof').click(function(){
         wrapper.prepend(back, next, login);
         back.show().animate({marginLeft:0},200);
         next.show().animate({marginLeft:0},800);
+        login.show().animate({marginLeft:0},800);
     });
 });
 
