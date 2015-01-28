@@ -1,3 +1,58 @@
 body {
     background-color: #FFF5EE
 }
+
+.buttons{
+	text-align: center;
+}
+
+.container {
+	text-align: center;
+}
+
+#student {
+	background: #FFF5EE;
+	border-radius: 33px;
+	border:none;
+	border: solid #A0522D 2px;
+	font-family: Arial;
+	padding: 10px 20px 10px 20px;
+	color: #A0522D;
+	position: relative;
+}
+
+#prof {
+	background: #FFF5EE;
+	border-radius: 33px;
+	border:none;
+	border: solid #A0522D 2px;
+	font-family: Arial;
+	padding: 10px 20px 10px 20px;
+	color: #A0522D;
+	position: relative;
+}
+
+#login {
+	background: #FFF5EE;
+	border-radius: 33px;
+	border:none;
+	border: solid #A0522D 2px;
+	font-family: Arial;
+	padding: 10px 20px 10px 20px;
+	color: #A0522D;
+	position: relative;
+}
+
+form {
+	color: #A0522D;
+}
+
+.bsimg {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 300px 300px;
+  	margin: 20px auto;
+  	padding: 50px;
+}
+
+
