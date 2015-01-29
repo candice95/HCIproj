@@ -1,14 +1,11 @@
 body {
-    background-color: #FFF5EE
+    background-color: #FFF5EE;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .buttons{
 	text-align: center;
-}
-
-.container {
-	text-align: center;
-	max-width: 100%
 }
 
 #student {
@@ -17,6 +14,7 @@ body {
 	border:none;
 	border: solid #A0522D 2px;
 	font-family: Arial;
+	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	color: #A0522D;
 	position: relative;
@@ -28,6 +26,7 @@ body {
 	border:none;
 	border: solid #A0522D 2px;
 	font-family: Arial;
+	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	color: #A0522D;
 	position: relative;
@@ -50,10 +49,10 @@ form {
 
 .bsimg {
 	max-width: 100%;
+	min-height: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
   	margin: 20px auto;
-  	padding: 50px;
+  	padding-top: 120px;
+  	padding-bottom: 120px;
 }
-
-
