@@ -5,8 +5,19 @@ body {
     overflow-x: hidden;
 }
 
+.container {
+	text-align: center;
+}
 .buttons{
 	text-align: center;
+
+}
+
+#inputs {
+	height: 100px;
+	background-color: 'seashell';
+	margin-left: 100%;
+	display: none;
 }
 
 #student {
@@ -42,6 +53,9 @@ body {
 	padding: 10px 20px 10px 20px;
 	color: #A0522D;
 	position: relative;
+	display: none;
+	margin:0 auto;
+	margin-left: 100%;
 }
 
 form {
