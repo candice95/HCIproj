@@ -1,5 +1,7 @@
 'use strict';
 
+var newLocation;
+
 $('#student').click(function(){
     var	current = $('.buttons'),
         next = $('.fields');
@@ -35,6 +37,17 @@ $("#back").click(function(){
     next.show().animate({marginLeft: '0%'}, 800);
     
 });
+
+$("#proflogin").click(function(){
+    event.preventDefault();
+    newLocation = this.href;
+    $('body').animate({marginLeft: '-200%'}, 300);
+    $('body').fadeOut(newpage);
+});
+
+function newpage(){
+    window.location = newLocation;
+}
 
 	
 
