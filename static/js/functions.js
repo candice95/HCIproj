@@ -19,11 +19,11 @@ function cancelFunc() {
 }
 
 function joinFunc() {
-	alert("Apppointment made successfully!");
+	alert("Appointment made successfully!");
 }
 
 function cancelApt() {
-	window.location.href='chooseCancelApt.html';
+	alert("Appointment successfully canceled!");
 }
 
 function backCancelApt() {
