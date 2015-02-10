@@ -6,13 +6,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/confirmCancel.css">
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script>
+$(document).ready(function(){
+$( "#popCancel" ).dialog({ autoOpen: false });
+$( "#confirmCancel" ).click(function() {
+$( "#popCancel" ).dialog( "open" );
+});
+});
+</script>
+
 </head>
 <body>
 	<h2>Are you sure you want to cancel following appointments?</h2>
 	<p>Feb 5 Thu  2:00-2:15pm  Professor Scott</p>
-	<button id="confirmCancel" class="btn" onclick="popConfirm()">Yes, cancel my appointments</button>
+	<button id="confirmCancel" class="btn">Yes, cancel my appointments</button>
 	<br><br>
 	<button id="noCancel" class="btn" onclick="backCancelApt()">No, thanks</button>
+
+<div id="popCancel" title="Cancel Successfully">
+	<p><font face="Georgia" size="4">Your Appointment Has Been Cancel!</font></p>
+    <button class="button" onclick="cancelFunc()">Cancel More</button>
+    <button class="button" onclick="backshFunc()">My Homepage</button>
+</div>
+
 	<script src="js/stuFunc.js"></script>
 </body>
 </html>
