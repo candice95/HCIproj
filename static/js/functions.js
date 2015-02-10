@@ -7,7 +7,7 @@ function backshFunc(){
 }
 
 function scheFunc(){
-	window.location.href='schedule.html';
+	window.location.href='student_make_appt.html';
 }
 
 function backaptFunc () {
