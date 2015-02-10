@@ -1,10 +1,12 @@
 .body{
+	
 	background-color: #FFF5EE;
 	font-family: Arial;
 	color: #A0522D; 
     max-width: 100%; 
     max-height: 100%; 
     overflow-x: hidden; 
+
 }
 
 .btn{

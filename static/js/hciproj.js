@@ -38,8 +38,8 @@ $("#back").click(function(){
     current.fadeOut(function(){});
     next.show().animate({marginLeft: '0%'}, 800);
     
-    
-    
+    $('#inputs').find('input:text').val('');
+    $('#inputs').find('input:password').val('');
 });
 
 $("#link").click(function(){
