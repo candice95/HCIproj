@@ -9,12 +9,13 @@
 </head>
 
 <body>
-	<p>This is the page for canceling appointments</p>
 	<h2>Select one or more appointments to cancel</h2>
-	<p>Should have a list of appointments here <br>
-	   Click on them</p>
+	<form action="">
+	<input type="checkbox" name="appointment" value="apt1">Feb 5 Thu  2:00-2:15pm  Professor Scott<br>
+	<input type="checkbox" name="appointment" value="apt1">Feb 12 Thu  2:30-2:45pm  Professor Scott
+	</form>
 	<button id="backstuhome" class="btn" onclick="backshFunc()">Back</button>
-	<button id="cancelapt" class="btn">Cancel appointments</button>
-	<script src="js/functions.js"></script>
+	<button id="cancelapt" class="btn" onclick="confirmCancel()">Cancel appointments</button>
+	<script src="js/stuFunc.js"></script>
 </body>
 </html>

@@ -2,7 +2,14 @@ body {
     background-color: #FFF5EE;
 }
 
-.btn {
+#successCancel {
+	background-color: #FFF5EE;
+}
+
+#message {
+	color: #A0522D;
+}
+.button {
 	background: #FFF5EE;
 	border-radius: 33px;
 	border:none;

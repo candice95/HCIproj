@@ -26,6 +26,13 @@ function cancelApt() {
 	window.location.href='chooseCancelApt.html';
 }
 
+function popConfirm() {
+	window.location.href='popConfirm.html';
+}
 function backCancelApt() {
 	window.location.href='cancelapt.html';
+}
+
+function confirmCancel() {
+	window.location.href='confirmCancel.html';
 }
