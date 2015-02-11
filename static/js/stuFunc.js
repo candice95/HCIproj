@@ -33,7 +33,7 @@ function backCancelApt() {
 	window.location.href='cancelapt.html';
 }
 
-
 function confirmCancel() {
 	window.location.href='confirmCancel.html';
 }
+
