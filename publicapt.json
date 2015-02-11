@@ -1,0 +1,18 @@
+{
+"apts":[
+		{
+			"name": "Adam Merkut",
+			"date": "Thu 2/12/2015",
+			"time": "2:00-2:15pm",
+			"description": "I'm the better Adam",
+			"email": "amerk@ucsd.edu"
+		},
+		{
+			"name": "Other Adam",
+			"date": "Thu 2/12/2015",
+			"time": "2:15-2:30pm",
+			"description": "I wish I was the better Adam",
+			"email": "otheradam@ucsd.edu"
+		}
+	]
+}

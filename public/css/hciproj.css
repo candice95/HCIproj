@@ -1,0 +1,93 @@
+body {
+    background-color: #FFF5EE;
+    max-width: 100%;
+    max-height: 100%
+    overflow-x: hidden;
+}
+
+#buttons{
+	text-align: center;
+	position: absolute;
+}
+
+#signin {
+	margin-left: 100%;
+	position: absolute;
+}
+
+#student {
+	background: #FFF5EE;
+	border-radius: 33px;
+	border:none;
+	border: solid #A0522D 2px;
+	font-family: Arial;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	color: #A0522D;
+	position: relative;
+	left: 60%;
+}
+
+#prof {
+	background: #FFF5EE;
+	border-radius: 33px;
+	border:none;
+	border: solid #A0522D 2px;
+	font-family: Arial;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	color: #A0522D;
+	position: relative;
+	left: 60%;
+}
+
+#back {
+	display: none;
+}
+
+.loginbtn {
+	background: #FFF5EE;
+	border-radius: 33px;
+	border:none;
+	border: solid #A0522D 2px;
+	font-family: Arial;
+	padding: 10px 20px 10px 20px;
+	color: #A0522D;
+	display: none;
+	position: relative;
+	left:35%;
+}
+
+#inputs {
+	height: 100px;
+	background-color: 'seashell';
+	display: none;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+}
+
+input {
+  display: inline-block;
+  float: left;
+}
+
+form {
+	color: #A0522D;
+}
+
+.bsimg {
+	max-width: 100%;
+	min-width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+  	margin: 20px auto;
+  	padding-top: 120px;
+  	padding-bottom: 120px;
+  	background-size: contain;
+}
