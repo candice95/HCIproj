@@ -26,6 +26,14 @@ function cancelApt() {
 	alert("Appointment successfully canceled!");
 }
 
+function popConfirm() {
+	window.location.href='popConfirm.html';
+}
 function backCancelApt() {
 	window.location.href='cancelapt.html';
+}
+
+
+function confirmCancel() {
+	window.location.href='confirmCancel.html';
 }
