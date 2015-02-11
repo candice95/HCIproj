@@ -7,65 +7,53 @@
 
 	<body class="body">
 
-		<div id="greeting">
+		<div class="greeting">
 
-		<h1>Hi, Professor Klemmer!</h1>
+			<h1>Hi, Professor Klemmer!</h1>
+
+
 		</div>
 
 		<br>
 
 		<div class="appointments">
 
-		<h2>My Appointments</h2>
-			<div>
-				<p>Thu Jan 29, 2015 
-					<br>
-					3:00-3:15pm
-					<br> 
 
-					Name: Student A
-					<br>
-					Email: studenta@ucsd.edu
-					<br>
+			<h2>My Appointments</h2>
+			
 
-					Description: Interested in HCI field
-				</p>
-			</div>
-			<div>
-				<p>Thu Feb 5, 2015
-					<br>
-					 2:00-2:15pm
-					<br>
+			Thu Jan 29, 2015
+			3:00-3:15pm<br> 
+			Name: Student A <br>
+			Email: studenta@ucsd.edu <br>
+			Description: Interested in HCI field
+				<br><br><br>
+			Thu Feb 5, 2015
+			2:00-2:15p <br>
+			Name: Student B<br>
+			Email: studenb@ucsd.edu<br>
+			Description: Help with assignment 4
 
-					Name: Student B
-					<br>
-					Email: studenb@ucsd.edu
-					<br>
-
-					Description: Help with assignment 4
-				</p>
-			</div>
 		</div>
 
-		<br>
-
-
 		<div class="cancel">
-			*Note: To cancel an appointment, send an email to the student*
+			<br>*Note: To cancel an appointment, send an email to the student*
 		</div>
 
 		<br>
 		
 		<div class="button">
 			<br>
-			<a class="btn" href="http://hciproj.herokuapp.com/professorhome.html">Back</a>
-			<a class="btn" href="http://hciproj.herokuapp.com/professorhome.html">Home</a>
-			<a class="btn" href="http://hciproj.herokuapp.com/">Log Out</a>
+
+
+			<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>
 		</div>
 
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/professorhome.js"></script>
+		<script src="js/popup.js"></script>
+	
 	</body>
 
 </html>
