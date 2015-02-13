@@ -2,6 +2,13 @@
 
 var newLocation;
 
+$(document).keypress(
+    function(event){
+     if (event.which == '13') {
+        event.preventDefault();
+      }
+});
+
 $('#student').click(function(){
     $('#proflogin').hide();
     var	current = $('.buttons'),
