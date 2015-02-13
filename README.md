@@ -1,4 +1,4 @@
-lab3
+Buddy System
 ====
 
-Lab 3 for Intro HCI: client-side interactivity
+The best app ever.
