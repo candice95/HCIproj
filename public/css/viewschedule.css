@@ -2,12 +2,14 @@ body {
     background-color: #FFF5EE;
 }
 
-#apt-background{
-	background-color: #800080;
+hr {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-color: #A0522d;
 }
 
-#namedate{
-	background-color: #8B4513;
+h3 {
+  color: #A0522d;
 }
 
 #calendar{
@@ -29,6 +31,48 @@ body {
   color: #fff5ee;
   font-size: 11px;
   background: #A0522D;
-  padding: 7px 13px 7px 13px;
+  padding: 7px 20px 7px 20px;
   text-decoration: none;
+}
+
+#public-appt {
+  height: 200px;
+  box-shadow: 10px 10px 5px #888888;
+  border: 1px solid;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-color: #A0522D;
+  margin-left: 5px;
+  margin-right: 13px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#appt {
+  border: 1px solid;
+  border-color: #A0522D;
+}
+
+#desc {
+  margin-left:2em
+}
+
+#labels {
+  padding-right: 0px;
+}
+
+.backbtn {
+  background: #FFF5EE;
+  border-radius: 33px;
+  border:none;
+  border: solid #A0522D 2px;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  color: #A0522D;
+  position: relative;
+}
+
+#joined {
+  display: none;
 }

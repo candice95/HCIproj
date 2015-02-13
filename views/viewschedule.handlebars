@@ -14,36 +14,54 @@
 <body>
 	<div id='calendar'></div>
 	
-	<br><h4 align="center">Public Appointments</h4>
+	<br><h3 align="center">Public Appointments</h3>
 
-
-	<div class="container-fluid">
+	<div class ="container" id="public-appt">
+	{{#each apts}}
+	<div class="container-fluid" id="appt">
 		<div class="row">
-			<div class="col-xs-2"></div>
+			<div class="col-xs-3" id="labels">
+				<p>Name:</p>
+				<hr>
+				<p>Date:</p>
+				<hr>
+				<p>Time:</p>
+				<hr>
+			</div>
   			<div class="col-xs-8" id="apt-background">
     			<div class="row">
-      				<div class="col-xs-5 " id="namedate">
-        				Name<br>Date<br>Time<br>desc
+      				<div class="col-xs-8" id="namedate">
+        				<p>{{name}}</p>
+        				<hr>
+        				<p>{{date}}</p>
+        				<hr>
+        				<p>{{time}}</p>
+        				<hr>
       				</div>
-      				<div class="col-xs-4"></div>
-      				<div class="col-xs-3">
-        				<button id="joinbtn" class="btn" onclick="joinFunc()">Join</button>
+      				
+      				<div class="col-xs-4">
+        				<button id="joinbtn" class="btn" >Join</button>
       				</div>
+      				<div class="col-xs-4" id="joined">Appointment joined</div>
     			</div>
   			</div>
   			<div class="col-xs-2"></div>
 		</div>
-	</div>
-
-	<!--{{#each apts}}
-		<div class ="container">
-			<p>Name: {{name}}</p>
-			<p>Data: {{date}}		Time: {{time}}</p>
-			<p>Reason for office hours visit: {{description}}</p>
+		<div class="row">
+			<div class="col-xs-12">
+				<p>Reason for visiting:</p>
+			</div>
 		</div>
-	{{/each}}-->
-
-	<button id="backstuhome" class="btn" onclick="backshFunc()">Back</button>
+		<div class="row">
+			<div class="col-xs-10" id="desc">
+				<p>{{description}}</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+	</div>
+	<br>
+	<button id="backstuhome" class="backbtn" onclick="backshFunc()">Back</button>
 	
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src='fullcalendar/lib/moment.min.js'></script>

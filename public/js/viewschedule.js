@@ -31,4 +31,8 @@ $(document).ready(function() {
 	})
 });
 
+$('.btn').click(function(){
+	$('#joined').show();
+});
+
 
