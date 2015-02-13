@@ -7,29 +7,50 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/makeapt.css">
-
+	<link rel="stylesheet" type="text/css" href="css/viewschedule.css">
+	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
 </head>
 
 <body>
+	<div id='calendar'></div>
 	
-	<div class="container">
-		{{#each apts}}
+	<br><h4 align="center">Public Appointments</h4>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-2"></div>
+  			<div class="col-xs-8" id="apt-background">
+    			<div class="row">
+      				<div class="col-xs-5 " id="namedate">
+        				Name<br>Date<br>Time<br>desc
+      				</div>
+      				<div class="col-xs-4"></div>
+      				<div class="col-xs-3">
+        				<button id="joinbtn" class="btn" onclick="joinFunc()">Join</button>
+      				</div>
+    			</div>
+  			</div>
+  			<div class="col-xs-2"></div>
+		</div>
+	</div>
+
+	<!--{{#each apts}}
 		<div class ="container">
 			<p>Name: {{name}}</p>
 			<p>Data: {{date}}		Time: {{time}}</p>
 			<p>Reason for office hours visit: {{description}}</p>
 		</div>
-		{{/each}}
-	</div>
+	{{/each}}-->
 
-	<button id="schedule" class="button" onclick="scheFunc()">schedule</button>
-	<button id="join" class="button" onclick="joinFunc()">join</button>
 	<button id="backstuhome" class="btn" onclick="backshFunc()">Back</button>
 	
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src='fullcalendar/lib/moment.min.js'></script>
+	<script src='fullcalendar/fullcalendar.js'></script>
 	<script src="js/stuFunc.js"></script>
-	<script src="js/makeapt.js"></script>
+	<script src="js/viewschedule.js"></script>
+	
 	
 </body>
 </html>
