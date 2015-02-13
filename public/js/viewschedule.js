@@ -21,7 +21,7 @@ $(document).ready(function() {
 		{
 			title: "Scott's Office Hours",
 			start:'2015-02-12T12:00:00',
-			end:'2015-02-12T14:15:00'
+			end:'2015-02-12T15:00:00'
 		}
 		],
 
