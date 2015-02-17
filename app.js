@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars');
 
 // routes
 var index = require('./routes/index');
-var makeapt = require('./routes/makeapt');
+var viewschedule = require('./routes/viewschedule');
 var cancelapt = require('./routes/cancelapt');
 var confirmCancel = require('./routes/confirmCancel');
 var popConfirm = require('./routes/popConfirm');
@@ -45,7 +45,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/makeapt', makeapt.view);
+app.get('/viewschedule', viewschedule.view);
 app.get('/cancelapt', cancelapt.view);
 app.get('/confirmCancel', confirmCancel.view);
 app.get('/popConfirm', popConfirm.view);

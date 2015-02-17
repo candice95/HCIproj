@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Create or Browse Appointments</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/viewschedule.css">
+	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+</head>
+
+<body>
+	<div id='calendar'></div>
+	<h6 align="center">Please click on an available time slot to begin making an appointment</h6>
+
+	<h3 align="center">Public Appointments</h3>
+
+	<div class ="container" id="public-appt">
+	{{#each apts}}
+	<div class="container-fluid" id="appt">
+		<div class="row">
+			<div class="col-xs-3" id="labels">
+				<p>Name:</p>
+				<hr>
+				<p>Date:</p>
+				<hr>
+				<p>Time:</p>
+				<hr>
+			</div>
+  			<div class="col-xs-8" id="apt-background">
+    			<div class="row">
+      				<div class="col-xs-8" id="namedate">
+        				<p>{{name}}</p>
+        				<hr>
+        				<p>{{date}}</p>
+        				<hr>
+        				<p>{{time}}</p>
+        				<hr>
+      				</div>
+      				
+      				<div class="col-xs-4">
+        				<button id="joinbtn" class="btn" >Join</button>
+      				</div>
+      				<div class="col-xs-4" id="joined">Appointment joined</div>
+    			</div>
+  			</div>
+  			<div class="col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<p>Reason for visiting:</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10" id="desc">
+				<p>{{description}}</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+	</div>
+	<br>
+	<button id="backstuhome" class="btn" onclick="backshFunc()">Back</button>
+	<button class="btn" id="home" onclick="homeFunc()">Home</button>
+	<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src='fullcalendar/lib/moment.min.js'></script>
+	<script src='fullcalendar/fullcalendar.js'></script>
+	<script src="js/stuFunc.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/viewschedule.js"></script>
+	
+	
+</body>
+</html>

@@ -1,5 +1,5 @@
 function makeFunc(){
-	window.location.href='/makeapt';
+	window.location.href='/viewschedule';
 }
 
 function backshFunc(){
@@ -11,16 +11,16 @@ function scheFunc(){
 }
 
 function backaptFunc () {
-	window.location.href='/makeapt';
+	window.location.href='/viewschedule';
 }
 
 function cancelFunc() {
 	window.location.href='/cancelapt';
 }
 
-function joinFunc() {
-	alert("Appointment made successfully!");
-}
+//function joinFunc() {
+//	alert("You have successfully joined the appointment!");
+//}
 
 function cancelApt() {
 	alert("Appointment successfully canceled!");
