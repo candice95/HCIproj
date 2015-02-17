@@ -2,12 +2,15 @@
 	<head>
 		<title>Create Appointment</title>
 		<link rel="stylesheet" type="text/css" href="css/student_make_appt.css">
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body class="body">
 		<h1>Create an Appointment</h1>
 			
 		<h2>Select a Date</h2>
+		
 			<div class="date">
 				<select>
 					<option value="w6">Thu 2/12/2015</option>
@@ -18,10 +21,11 @@
 					<option value="w11">Thu 3/19/2015</option>
 				</select>
 			</div>
+		
 
 		<h2>Select a Time</h2>
 			<div class="time">
-				<select>
+				<select class="col-xs-3">
 					<option value="1">2:00-2:15pm</option>
 					<option value="2">2:15-2:30pm</option>
 					<option value="3">2:30-2:45pm</option>
@@ -30,6 +34,7 @@
 			</div>
 
 			<br>
+		
 
 		<form id="inputName" role="form">
 			<div class="name">
@@ -52,8 +57,8 @@
 
 		<form action="">
 			Do you want this appointment to be public or private?<br><br>
-			<input type="checkbox" name="public">Public (allow other students to join your appointment)<br>
-			<input type="checkbox" name="private">Private (have a one on one appointment)
+			<input type="radio" name="public">Public (allow other students to join your appointment)<br>
+			<input type="radio" name="private">Private (have a one on one appointment)
 		</form>
 
 		<div class="buttons">
@@ -77,6 +82,9 @@
 
 			</div>
 		</div>
+
+
+		
 
 		<script src="js/popup.js"></script>
 
