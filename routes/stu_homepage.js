@@ -1,8 +1,3 @@
-// Old code
-//exports.view = function(req, res){
-//  res.render('stu_homepage')
-//};
-
 var models = require('../models');
 
 /*
@@ -18,5 +13,20 @@ exports.view = function(req, res){
 	function renderAppointments(err, allapt) {
 		res.render('stu_homepage', { 'allapt': allapt });
 	}
+}
+/*
+ * DELETE chosen appointment
+ */
+exports.deleteApt = function(req, res) {
+	var aptID = req.params.id;
 
-};
+	// find the apt and remove it
+	models.Appointment
+		.find({ "_id":aptID })
+		.remove(deleteCallback);
+
+	function deleteCallback(err) {
+		if(err) { console.log(err); }
+		res.send();
+	}
+}

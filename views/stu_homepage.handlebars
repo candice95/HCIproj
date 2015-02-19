@@ -15,18 +15,19 @@
 	<div class="appointment">
 		<h2>My Appointments</h2>
 			{{#each allapt}}
-			<div class="information">
+			<div class="information" id="information{{id}}">
 				<h4>{{date}}</h4>
 				<h4>{{time}}</h4>
 				<h4>{{professor}}</h4>
 				<h4>{{location}}</h4>
+				<button class="apt-delete" type="button">cancel appointment</button>
+				<br>
 			</div>
 			{{/each}}
 	</div>
+	<br> <br> <br>
 	<div class ="buttons">
 		<button id="make" class="btn" onclick="makeFunc()">Make appointments</button>
-		<br><br>
-		<button id="cancel" class="btn" onclick="cancelFunc()">Cancel appointments</button>
 		<br><br>
 		<a href="/">
 				<button id="home" class="btn">Log Out</button>
@@ -35,5 +36,6 @@
 
 	<script src="https://code.jquery.com/jquery.js"></script>	
 	<script src="js/stuFunc.js"></script>
+	<script src="js/stu_homepage.js"></script>
 </body>
 </html>

@@ -18,10 +18,6 @@ function cancelFunc() {
 	window.location.href='/cancelapt';
 }
 
-//function joinFunc() {
-//	alert("You have successfully joined the appointment!");
-//}
-
 function cancelApt() {
 	alert("Appointment successfully canceled!");
 }
