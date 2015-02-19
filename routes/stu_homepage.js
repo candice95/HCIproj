@@ -1,8 +1,3 @@
-// Old code
-//exports.view = function(req, res){
-//  res.render('stu_homepage')
-//};
-
 var models = require('../models');
 
 /*
