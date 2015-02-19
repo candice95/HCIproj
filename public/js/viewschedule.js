@@ -19,9 +19,9 @@ $(document).ready(function() {
 		weekends: false,
 		events: [
 		{
-			title: "Scott's Office Hours",
-			start:'2015-02-12T12:00:00',
-			end:'2015-02-12T15:00:00'
+			title: "Click to set appointment",
+			start:'2015-02-19T12:00:00',
+			end:'2015-02-19T15:00:00'
 		}
 		],
 

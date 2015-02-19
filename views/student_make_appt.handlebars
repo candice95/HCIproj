@@ -13,28 +13,16 @@
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
 		<!--functionality-->
-		<script>
-			$(document).ready(function(){
-			$( "#popMake" ).dialog({ autoOpen: false });
-			$( "#submit" ).click(function() {
-				var date = $("#date option:selected").text();
-				var time = $("#time option:selected").text();
-				document.getElementById("aptdate").innerHTML = date;
-				document.getElementById("apttime").innerHTML = time;
-			$( "#popMake" ).dialog( "open" );
-			});
-		    });
-		</script>
+		
 
 	</head>
 
 	<body class="body">
 		<h1>Create an Appointment</h1>
 			
-		<h2>Select a Date</h2>
-
+		<form id="inputName" role="form">
+			<h2>Select a Date</h2>
 			<div class="date" id="date">
-
 				<select>
 					<option value="w6">Thu 2/12/2015</option>
 					<option value="w7">Thu 2/19/2015</option>
@@ -45,9 +33,7 @@
 				</select>
 			</div>
 		
-
-		<h2>Select a Time</h2>
-
+			<h2>Select a Time</h2>
 			<div class="time" id="time">
 				<select>
 					<option value="1">2:00-2:15pm</option>
@@ -56,44 +42,34 @@
 					<option value="4">2:45-3:00pm</option>
 				</select>
 			</div>
-
-			<br>
-		
-
-		<form id="inputName" role="form">
+			<br><br>
 			<div class="name">
 				Name: 
-				<input type="text" placeholder="Full Name" name="name">
+				<input type="text" id="name" placeholder="Full Name" name="name">
 			</div>
-				<br>
+			<br>
 			<div class="email">
 				Email:
-				<input type="text" placeholder="Email" name="name">
+				<input type="text" id="email" placeholder="Email" name="name">
 			</div>
-				<br>
+			<br>
 			<div class="description">
 				Description:
 				<br>
-				<textarea rows="5" cols="50" placeholder="What is the purpose of your appointment?"></textarea>
+				<textarea rows="5" cols="50" id="description" placeholder="What is the purpose of your appointment?"></textarea>
 			</div>
+			<br>
+			<form action="" id="typeSelect">
+				Do you want this appointment to be public or private?<br><br>
+				<input type="radio" name="type" value="public" checked>Public (allow other students to join your appointment)<br>
+				<input type="radio" name="type" value="private">Private (have a one on one appointment)
+			</form>
 
-		</form>
-
-		<form action="">
-			Do you want this appointment to be public or private?<br><br>
-			<input type="radio" name="public">Public (allow other students to join your appointment)<br>
-			<input type="radio" name="private">Private (have a one on one appointment)
+			<input type="submit" value="Submit" class="btn" id="submit">
 		</form>
 
 		<div class="buttons">
 			<br><br>
-			<div class="appt">
-
-				<!-- deleted cancel buttons -->
-				<button class="btn" id="submit">Submit</button>
-			</div>
-
-			<br><br><br>
 
 			<div class="nav">
 
@@ -111,7 +87,7 @@
 		<h4 id="apttime"></h4>
 	</div>
 
-
+	<script src="js/student_make_appt.js"></script>
 	<script src="js/popup.js"></script>
 	<script src="js/stuFunc.js"></script>
 	</body>

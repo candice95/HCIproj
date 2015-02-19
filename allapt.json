@@ -1,14 +1,22 @@
 [
 	{
-		"date": "Thu Jan 29, 2015",
-		"time": "3:00-3:15pm",
+		"date": "Thu 2/29/2015",
+		"time": "2:45-3:00pm",
+		"name": "Adam Merkut",
+		"email": "apmerkut@ucsd.edu",
+		"description": "I'm the better Adam",
 		"professor": "Professor Scott Klemmer",
-		"location": "Atkinson Hall 5204"
+		"location": "Atkinson Hall 5204",
+		"type": "public"
 	},
 	{
-		"date": "Thu Feb 5, 2015",
+		"date": "Thu 2/29/2015",
 		"time": "2:00-2:15pm",
+		"name": "Other Adam",
+		"email": "otheradam@ucsd.edu",
+		"description": "I wish I was the better Adam",
 		"professor": "Professor Scott Klemmer",
-		"location": "Atkinson Hall 5204"
+		"location": "Atkinson Hall 5204",
+		"type": "private"
 	}
 ]
