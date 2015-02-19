@@ -9,11 +9,13 @@
 </head>
 
 <body>
-	<h1>Hi, Student!</h1>
+
+	<h1>Welcome, Student!</h1>
+
 	<div class="appointment">
 		<h2>My Appointments</h2>
 			{{#each allapt}}
-			<div class="information">
+			<div class="information" id="information{{id}}">
 				<h4>{{date}}</h4>
 				<h4>{{time}}</h4>
 				<h4>{{professor}}</h4>
@@ -34,5 +36,6 @@
 
 	<script src="https://code.jquery.com/jquery.js"></script>	
 	<script src="js/stuFunc.js"></script>
+	<script src="js/stu_homepage.js"></script>
 </body>
 </html>

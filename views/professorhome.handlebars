@@ -3,13 +3,14 @@
 <head>
 	<title>Professor Home</title>
 	<link rel="stylesheet" type="text/css" href="css/professorhome.css">
+
 </head>
 
 	<body class="body">
 
 		<div class="greeting">
 
-			<h1>Hi, Professor Klemmer!</h1>
+			<h1>Welcome, Professor!</h1>
 
 
 		</div>
@@ -21,20 +22,15 @@
 
 			<h2>My Appointments</h2>
 			
-
-			Thu Jan 29, 2015
-			3:00-3:15pm<br> 
-			Name: Student A <br>
-			Email: studenta@ucsd.edu <br>
-			Description: Interested in HCI field<br>
-			Type: Private
+			{{#each allapt}}
+				{{date}}
+				{{time}}<br> 
+				Name: {{name}} <br>
+				Email: {{email}}<br>
+				Description: {{description}}<br>
+				Type: {{type}}
 				<br><br>
-			Thu Feb 5, 2015
-			2:00-2:15p <br>
-			Name: Student B<br>
-			Email: studenb@ucsd.edu<br>
-			Description: Help with assignment 4<br>
-			Type: Public
+			{{/each}}
 
 			<!--added public/private to description-->
 

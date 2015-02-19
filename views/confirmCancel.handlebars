@@ -12,10 +12,10 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <script>
 $(document).ready(function(){
-$( "#popCancel" ).dialog({ autoOpen: false });
-$( "#confirmCancel" ).click(function() {
-$( "#popCancel" ).dialog( "open" );
-});
+	$( "#popCancel" ).dialog({ autoOpen: false });
+	$( "#confirmCancel" ).click(function() {
+		$( "#popCancel" ).dialog( "open" );
+	});
 });
 </script>
 
@@ -28,7 +28,7 @@ $( "#popCancel" ).dialog( "open" );
 	<button id="noCancel" class="btn" onclick="backCancelApt()">No, thanks</button>
 
 <div id="popCancel" title="Cancel Successfully">
-	<p><font face="Georgia" size="4">Your Appointment Has Been Cancel!</font></p>
+	<p><font face="Georgia" size="4">Your Appointment Has Been Cancelled!</font></p>
     <button class="button" onclick="cancelFunc()">Cancel More</button>
     <button class="button" onclick="backshFunc()">My Homepage</button>
 </div>
