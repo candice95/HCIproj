@@ -1,3 +1,20 @@
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function() {
+	initializePage();
+})
+
+/*
+ * Function that is called when the document is ready.
+ */
+ function initializePage() {
+ 	$('.information button').click(function() {
+		$.post('/stu_homepage/deleteApt', function() {
+			window.location.href = '/';
+		});
+ 	});
+ }
+
+
 function makeFunc(){
 	window.location.href='/viewschedule';
 }
@@ -17,10 +34,6 @@ function backaptFunc () {
 function cancelFunc() {
 	window.location.href='/cancelapt';
 }
-
-//function joinFunc() {
-//	alert("You have successfully joined the appointment!");
-//}
 
 function cancelApt() {
 	alert("Appointment successfully canceled!");

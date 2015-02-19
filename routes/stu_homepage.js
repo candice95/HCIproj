@@ -14,4 +14,20 @@ exports.view = function(req, res){
 		res.render('stu_homepage', { 'allapt': allapt });
 	}
 
-};
+}
+/*
+ * DELETE chosen appointment
+ */
+exports.deleteApt = function(req, res) {
+	var aptID = req.param.id;
+
+	// find the apt and remove it
+	models.Appointment
+		.find({ "_ic":aptID })
+		.remove(deleteCallback);
+
+	function deleteCallback(err) {
+		if(err) { console.log(err); }
+		res.send("good");
+	}
+}
