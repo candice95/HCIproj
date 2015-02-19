@@ -1,0 +1,14 @@
+[
+	{
+		"date": "Thu Jan 29, 2015",
+		"time": "3:00-3:15pm",
+		"professor": "Professor Scott Klemmer",
+		"location": "Atkinson Hall 5204"
+	},
+	{
+		"date": "Thu Feb 5, 2015",
+		"time": "2:00-2:15pm",
+		"professor": "Professor Scott Klemmer",
+		"location": "Atkinson Hall 5204"
+	}
+]
