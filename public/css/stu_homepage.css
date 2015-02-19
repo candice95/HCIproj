@@ -13,3 +13,12 @@ body {
 	color: #A0522D;
 	text-align: center;
 }
+
+#appt {
+  border-radius: 10px;
+  background: #FAEBD7;
+  border-color: #A0522D;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
