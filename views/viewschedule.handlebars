@@ -12,7 +12,21 @@
 </head>
 
 <body>
-	<div id='calendar'></div>
+	<div class="container-fluid" id="navbuttons">
+		<div class="row">
+			<div class="col-xs-2">
+				<button class="btn" id="home" onclick="homeFunc()">Home</button>
+			</div>
+			<div class="col-xs-5"></div>
+			<div class="col-xs-3">
+				<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="calendardiv">
+		<div id='calendar'></div>
+	</div>
 	<h6 align="center">Please click on an available time slot to begin making an appointment</h6>
 
 	<h3 align="center">Public Appointments</h3>
@@ -64,9 +78,7 @@
 
 	</div>
 	<br>
-	<button id="backstuhome" class="btn" onclick="backshFunc()">Back</button>
-	<button class="btn" id="home" onclick="homeFunc()">Home</button>
-	<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>
+	
 	
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src='fullcalendar/lib/moment.min.js'></script>

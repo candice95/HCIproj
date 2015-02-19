@@ -1,11 +1,6 @@
 $(document).ready(function() {
 	$('#calendar').fullCalendar({
 		allDaySlot: false,
-		businessHours: {
-			start: '12:00',
-			end: '14:00',
-			dow: [4]
-		},
 		defaultView: 'agendaWeek',
 		fixedWeekCount: false,
 		header: {
@@ -28,11 +23,13 @@ $(document).ready(function() {
 	    eventClick: function(calEvent, jsEvent, view) {
 			window.location.href='/student_make_appt';
 	    }
-	})
+	});
 });
 
 $('.btn').click(function(){
 	$('#joined').show();
 });
+
+
 
 
