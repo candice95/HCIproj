@@ -2,28 +2,39 @@
 	<head>
 		<title>Create Appointment</title>
 		<link rel="stylesheet" type="text/css" href="css/student_make_appt.css">
+		
+		<!--optimize for mobile-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+		<!--functionality-->
 		<script>
-		$(document).ready(function(){
-		$( "#popMake" ).dialog({ autoOpen: false });
-		$( "#submit" ).click(function() {
-			var date = $("#date option:selected").text();
-			var time = $("#time option:selected").text();
-			document.getElementById("aptdate").innerHTML = date;
-			document.getElementById("apttime").innerHTML = time;
-		$( "#popMake" ).dialog( "open" );
-		});
-	    });
+			$(document).ready(function(){
+			$( "#popMake" ).dialog({ autoOpen: false });
+			$( "#submit" ).click(function() {
+				var date = $("#date option:selected").text();
+				var time = $("#time option:selected").text();
+				document.getElementById("aptdate").innerHTML = date;
+				document.getElementById("apttime").innerHTML = time;
+			$( "#popMake" ).dialog( "open" );
+			});
+		    });
 		</script>
+
 	</head>
 
 	<body class="body">
 		<h1>Create an Appointment</h1>
 			
 		<h2>Select a Date</h2>
+
 			<div class="date" id="date">
+
 				<select>
 					<option value="w6">Thu 2/12/2015</option>
 					<option value="w7">Thu 2/19/2015</option>
@@ -33,8 +44,10 @@
 					<option value="w11">Thu 3/19/2015</option>
 				</select>
 			</div>
+		
 
 		<h2>Select a Time</h2>
+
 			<div class="time" id="time">
 				<select>
 					<option value="1">2:00-2:15pm</option>
@@ -45,6 +58,7 @@
 			</div>
 
 			<br>
+		
 
 		<form id="inputName" role="form">
 			<div class="name">
@@ -67,8 +81,8 @@
 
 		<form action="">
 			Do you want this appointment to be public or private?<br><br>
-			<input type="checkbox" name="public">Public (allow other students to join your appointment)<br>
-			<input type="checkbox" name="private">Private (have a one on one appointment)
+			<input type="radio" name="public">Public (allow other students to join your appointment)<br>
+			<input type="radio" name="private">Private (have a one on one appointment)
 		</form>
 
 		<div class="buttons">
@@ -90,11 +104,13 @@
 			</div>
 		</div>
 
+
 	<div id="popMake" title="Made Successfully">
 		<p><font face="Georgia" size="4">Your Appointment Has Been Made!</font></p>
 		<h4 id="aptdate"></h4>
 		<h4 id="apttime"></h4>
 	</div>
+
 
 	<script src="js/popup.js"></script>
 	<script src="js/stuFunc.js"></script>
