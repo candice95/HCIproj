@@ -6,6 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/stu_homepage.css">
+
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
 
 <body>
@@ -16,7 +20,7 @@
 		<h2>My Appointments</h2>
 			{{#each allapt}}
 			<div class="information" id="information{{id}}">
-				<h4>{{date}}</h4>
+				<h4 class="date">{{date}}</h4>
 				<h4>{{time}}</h4>
 				<h4>{{professor}}</h4>
 				<h4>{{location}}</h4>
@@ -34,7 +38,13 @@
 			</a>
 	</div>
 
-	<script src="https://code.jquery.com/jquery.js"></script>	
+	<div id="popCancel" title="Confirm cancel">
+		<p><font face="Georgia" size="4">Are you sure to cancel this appointment?</font></p>
+		<button id="confirmCancel">Yes, cancel my appointment.</button>
+		<button id="noCancel">No, thanks</button>
+	</div>
+	
+	<!--<script src="https://code.jquery.com/jquery.js"></script>-->
 	<script src="js/stuFunc.js"></script>
 	<script src="js/stu_homepage.js"></script>
 </body>
