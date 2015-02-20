@@ -2,19 +2,21 @@
 
 <html>
 <head>
-	<title>STU HOME</title>
+	<title>Student Homepage</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/stu_homepage.css">
+
 </head>
 
 <body>
 
-	<h1>Welcome, Student!</h1>
-
-	<div class="appointment">
-		<h2>My Appointments</h2>
+	<h1>Welcome, Student!</h1><br>
+	<h2>My Appointments</h2>
+	
+		
 			{{#each allapt}}
+		<div class="container-fluid" id="appt">
 			<div class="information" id="information{{id}}">
 				<h4>Date: {{date}}</h4>
 				<h4>Time: {{time}}</h4>
@@ -24,11 +26,14 @@
 				<h5>Made by: {{name}}<h5>
 				<br>
 				<button class="apt-delete" type="button">cancel appointment</button>
+				
 				<br>
 			</div>
+		</div>	
 			{{/each}}
-	</div>
-	<br> <br> <br>
+			
+	
+	<br> 
 	<div class ="buttons">
 		<button id="make" class="btn" onclick="makeFunc()">Make appointments</button>
 		<br><br>

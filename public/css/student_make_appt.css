@@ -18,9 +18,16 @@
  	border:none; 
  	border: solid #A0522D 2px; 
  	font-family: Arial; 
- 	font-size: 20px;
+ 	font-size: 15px;
  	padding: 10px 20px 10px 20px;
 
+}
+
+#submit{
+	color: #fff5ee;
+  font-size: 13px;
+  font-color: #FFF5EE;
+  background: #A0522D;
 }
 
 a:link{

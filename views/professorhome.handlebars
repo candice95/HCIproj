@@ -3,7 +3,9 @@
 <head>
 	<title>Professor Home</title>
 	<link rel="stylesheet" type="text/css" href="css/professorhome.css">
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 </head>
 
 	<body class="body">
@@ -16,25 +18,24 @@
 		</div>
 
 		<br>
-
-		<div class="appointments">
-
-
-			<h2>My Appointments</h2>
+		<h2>My Appointments</h2>
+		
 			
 			{{#each allapt}}
-				{{date}}
-				{{time}}<br> 
+			<div class="appointments" id="appt">
+				<h4>{{date}} {{time}}</h4>
 				Name: {{name}} <br>
 				Email: {{email}}<br>
 				Description: {{description}}<br>
 				Type: {{type}}
-				<br><br>
+				</div>
+
+
 			{{/each}}
 
 			<!--added public/private to description-->
 
-		</div>
+		<br>
 
 		<div class="cancel">
 			<br>*Note: To cancel an appointment, send an email to the student*
