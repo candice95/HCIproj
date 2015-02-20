@@ -20,7 +20,7 @@ h3 {
 	font-size: 1.7em;
 }
 
-#joinbtn {
+.joinbutton {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
   border-radius: 10px;
@@ -80,6 +80,7 @@ h3 {
 
 #navbuttons {
   margin: 0.2em;
+  margin-left: 15px;
 }
 
 #logoutdiv {

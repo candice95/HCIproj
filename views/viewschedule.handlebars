@@ -61,9 +61,14 @@
       				</div>
       				
       				<div class="col-xs-4" id="div{{id}}">
-        				<button id="joinbtn" class="joinbutton" >Join</button>
+      					<button id="joinbtn{{id}}" class="joinbutton" >Join</button>
+      					<script>
+							if ("{{owner}}" == "thisuser"){
+								document.getElementById("joinbtn{{id}}").style.visibility = "hidden";
+							}
+						</script>
       				</div>
-      				<div class="col-xs-4" id="joined">Appointment joined</div>
+      				<div class="col-xs-4 joined{{id}}" id="joined">Appointment joined</div>
     			</div>
   			</div>
   			<div class="col-xs-2"></div>

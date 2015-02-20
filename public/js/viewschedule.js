@@ -32,7 +32,8 @@ $('.joinbutton').click(function(){
 	var idNumber = infoID.substr('div'.length);
 	console.log(idNumber);
 
-	$('#'+ infoID).fadeOut();
+	$('#'+ infoID).animate({ opacity: 0 });
+	$('.joined' + idNumber).show();
 
 	$.post('/viewschedule/'+idNumber+'/join', function() {
 	});
