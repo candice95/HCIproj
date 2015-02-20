@@ -1,17 +1,17 @@
 body {
     background-color: #FFF5EE;
+    margin: 0px;
 }
 
 .btn {
 	background: #FFF5EE;
-	border-radius: 33px;
-	border:none;
-	border: solid #A0522D 2px;
-	font-family: Arial;
-	font-size: 18px;
-	padding: 10px 20px 10px 20px;
-	color: #A0522D;
-	text-align: center;
+  	border-radius: 33px;
+  	border:none;
+  	border: solid #A0522D 2px;
+  	font-family: Arial;
+  	font-size: 15px;
+  	padding: 10px 15px 10px 15px;
+  	color: #A0522D;
 }
 
 #appt {
@@ -20,5 +20,14 @@ body {
   border-color: #A0522D;
   padding: 10px;
   margin-bottom: 15px;
+}
+
+#navbuttons {
+  margin: 0.2em;
+  margin-left: 15px;
+}
+
+#logoutdiv {
+  padding-left: 0px;
 }
 

@@ -38,3 +38,12 @@ a:visited{
 	text-decoration: none;
 	color::#A0522D;
 }
+
+#navbuttons {
+  margin: 0.2em;
+  margin-left: 15px;
+}
+
+#logoutdiv {
+  padding-left: 0px;
+}

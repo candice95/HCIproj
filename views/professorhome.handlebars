@@ -2,53 +2,45 @@
 
 <head>
 	<title>Professor Home</title>
-	<link rel="stylesheet" type="text/css" href="css/professorhome.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/professorhome.css">
 	
 </head>
 
-	<body class="body">
-
-		<div class="greeting">
-
-			<h1>Welcome, Professor!</h1>
-
-
+<body class="body">
+	<div class="container-fluid" id="navbuttons">
+		<div class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8" align="center"></div>
+			<div class="col-xs-2" id="logoutdiv">
+				<img src='images/brownlogout.png' id="logout" onclick="logoutFunc()">
+			</div>
 		</div>
+	</div>
 
-		<br>
-		<h2>My Appointments</h2>
-		
+
+	<div class="container">
+
+		<h1>Welcome, Professor!</h1>
+		<h2>My Appointments</h2>		
 			
-			{{#each allapt}}
-			<div class="appointments" id="appt">
-				<h4>{{date}} {{time}}</h4>
-				Name: {{name}} <br>
-				Email: {{email}}<br>
-				Description: {{description}}<br>
-				Type: {{type}}
-				</div>
-
-
-			{{/each}}
-
-			<!--added public/private to description-->
-
-		<br>
+		{{#each allapt}}
+		<div class="appointments" id="appt">
+			<h4>{{date}} {{time}}</h4>
+			Name: {{name}} <br>
+			Email: {{email}}<br>
+			Description: {{description}}<br>
+			Type: {{type}}
+		</div>
+		{{/each}}
 
 		<div class="cancel">
 			<br>*Note: To cancel an appointment, send an email to the student*
 		</div>
-
-		<br>
-		
-		<div class="button">
-			<br>
-
-
-			<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>
-		</div>
+	</div>
 
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>

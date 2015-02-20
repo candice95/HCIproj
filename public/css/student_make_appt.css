@@ -43,3 +43,12 @@ a:visited{
 .name{
 	background: #FFF5EE; 
 }
+
+#navbuttons {
+  margin: 0.2em;
+  margin-left: 15px;
+}
+
+#logoutdiv {
+  padding-left: 0px;
+}
