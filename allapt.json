@@ -5,9 +5,10 @@
 		"name": "Adam Merkut",
 		"email": "apmerkut@ucsd.edu",
 		"description": "I'm the better Adam",
-		"professor": "Professor Scott Klemmer",
+		"professor": "Scott Klemmer",
 		"location": "Atkinson Hall 5204",
-		"type": "public"
+		"type": "Public",
+		"owner": "thisuser"
 	},
 	{
 		"date": "Thu 2/29/2015",
@@ -15,8 +16,20 @@
 		"name": "Other Adam",
 		"email": "otheradam@ucsd.edu",
 		"description": "I wish I was the better Adam",
-		"professor": "Professor Scott Klemmer",
+		"professor": "Scott Klemmer",
 		"location": "Atkinson Hall 5204",
-		"type": "private"
+		"type": "Private",
+		"owner": "other"
+	},
+	{
+		"date": "Thu 2/29/2015",
+		"time": "2:15-2:30pm",
+		"name": "Llama",
+		"email": "llamallama@ucsd.edu",
+		"description": "This is weird",
+		"professor": "Scott Klemmer",
+		"location": "Atkinson Hall 5204",
+		"type": "Public",
+		"owner": "other"
 	}
 ]

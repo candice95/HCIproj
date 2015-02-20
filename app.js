@@ -59,6 +59,7 @@ app.get('/stu_homepage', stu_homepage.view);
 app.get('/student_make_appt', student_make_appt.view);
 app.post('/viewschedule/new', viewschedule.addAppointment);
 app.post('/stu_homepage/:id/delete', stu_homepage.deleteApt);
+app.post('/viewschedule/:id/join', viewschedule.joinAppointment);
 
 // Example route
 // app.get('/users', user.list);

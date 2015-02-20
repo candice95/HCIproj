@@ -26,8 +26,15 @@ $(document).ready(function() {
 	});
 });
 
-$('.btn').click(function(){
-	$('#joined').show();
+$('.joinbutton').click(function(){
+	var infoID = $(this).closest('.col-xs-4').attr('id');
+	console.log(infoID);
+	var idNumber = infoID.substr('div'.length);
+	console.log(idNumber);
+
+	$.post('/viewschedule/'+idNumber+'/join', function() {
+		window.location.href = '/viewschedule';
+	});
 });
 
 

@@ -8,7 +8,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
  function initializePage() { 	
- 	$('.information').find('.apt-delete').click(function(e) {
+ 	$('.information .apt-delete').click(function(e) {
  		// Get the div ID, e.g., "project3"
 		var infoID = $(this).closest('.information').attr('id');
 		// get rid of 'project' from the front of the id 'project3'

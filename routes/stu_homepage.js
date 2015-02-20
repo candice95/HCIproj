@@ -6,7 +6,7 @@ var models = require('../models');
 exports.view = function(req, res){
 
 	models.Appointment
-		.find()
+		.find({"owner": "thisuser"})
 		.sort('-date')
 		.exec(renderAppointments);
 
