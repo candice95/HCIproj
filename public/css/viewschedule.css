@@ -61,9 +61,8 @@ h3 {
   border: solid #A0522D 2px;
   font-family: Arial;
   font-size: 15px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 15px 10px 15px;
   color: #A0522D;
-  position: relative;
 }
 
 #joined {
@@ -72,6 +71,7 @@ h3 {
 
 #calendardiv {
   margin-top: 1.1em;
+  display: none;
 }
 
 .fc-title {
@@ -80,4 +80,8 @@ h3 {
 
 #navbuttons {
   margin: 0.2em;
+}
+
+#logoutdiv {
+  padding-left: 0px;
 }

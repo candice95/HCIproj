@@ -18,12 +18,17 @@
 			{{#each allapt}}
 		<div class="container-fluid" id="appt">
 			<div class="information" id="information{{id}}">
-				<h4>Date: {{date}}</h4>
-				<h4>Time: {{time}}</h4>
-				<h4>Professor: {{professor}}</h4>
-				<h4>Location: {{location}}</h4>
-				<h4>Appointment type: {{type}}</h4>
-				<h5>Made by: {{name}}<h5>
+				<h4>{{date}} {{time}}</h4>
+				Professor: {{professor}}<br>
+				Location: {{location}}<br>
+				Appointment type: {{type}}<br>
+				
+				<h5 id="madeby{{id}}">Made by: {{name}}<h5>
+				<script>
+				if ("{{origowner}}" == "thisuser"){
+					document.getElementById("madeby{{id}}").innerHTML = "Made by: You";
+				}
+				</script>
 				<br>
 				<button class="apt-delete" type="button">cancel appointment</button>
 				

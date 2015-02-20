@@ -24,7 +24,8 @@ $(document).ready(function(){
 			'professor': 'Scott Klemmer',
 			'location': 'Atkinson Hall 5204',
 			'type': type,
-			'owner': 'thisuser'
+			'owner': 'thisuser',
+			'origowner': 'thisuser'
 		};
 
 		$(".ui-button-icon-primary.ui-icon.ui-icon-closethick").click(function(){

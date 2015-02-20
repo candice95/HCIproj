@@ -31,14 +31,10 @@ exports.addAppointment = function(req, res) {
 exports.joinAppointment = function(req, res) {
   var aptID = req.params.id;
 
-  // find the apt and remove it
-  models.Appointment
-    .find({ "_id": aptID })
-    .update({"owner": "thisuser"})
-    .exec(afterUpdating);
+  models.Appointment.update({ _id: aptID }, { $set: {owner: 'thisuser'}}, afterUpdating)
 
-  function afterUpdating(err, allapt) {
+  function afterUpdating(err) {
     if(err) { console.log(err); }
-    res.render('viewschedule/#', {'allapt': allapt });
+    res.send();
   }
 }

@@ -11,7 +11,8 @@ var AppointmentSchema = new Mongoose.Schema({
   "professor": String,
   "location": String,
   "type": String,
-  "owner": String
+  "owner": String,
+  "origowner": String
 });
 
 exports.Appointment = Mongoose.model('Appointment', AppointmentSchema);

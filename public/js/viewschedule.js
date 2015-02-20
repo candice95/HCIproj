@@ -23,7 +23,7 @@ $(document).ready(function() {
 	    eventClick: function(calEvent, jsEvent, view) {
 			window.location.href='/student_make_appt';
 	    }
-	});
+	}); 
 });
 
 $('.joinbutton').click(function(){
@@ -32,9 +32,24 @@ $('.joinbutton').click(function(){
 	var idNumber = infoID.substr('div'.length);
 	console.log(idNumber);
 
+	$('#'+ infoID).fadeOut();
+
 	$.post('/viewschedule/'+idNumber+'/join', function() {
-		window.location.href = '/viewschedule';
 	});
+});
+
+$('#calendarbtn').click(function(){
+	if ($(this).text() == 'Create An Appointment'){
+		$(this).text("Hide Calendar");
+		$('#calendardiv').height('0em');
+		$('#calendardiv').show().animate({height: '+=2em'}, 500);
+		$('#calendardiv').stop().animate({height:'25em'});
+		$('#calendar').fullCalendar('render');
+	}
+	else {
+		$(this).text("Create An Appointment");
+		$('#calendardiv').slideUp(500);		
+	}
 });
 
 
