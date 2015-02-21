@@ -15,8 +15,8 @@ $(document).ready(function() {
 		events: [
 		{
 			title: "Click to set appointment",
-			start:'2015-02-19T12:00:00',
-			end:'2015-02-19T15:00:00'
+			start:'2015-02-26T12:00:00',
+			end:'2015-02-26T15:00:00'
 		}
 		],
 
