@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$('#popCancel').dialog({ autoOpen: false });
 	$('#popDrop').dialog({ autoOpen: false });
 
- 	$('.information .apt-delete').click(function(e) {
+ 	$('.information .delete').click(function(e) {
 		var infoID = $(this).closest('.information').attr('id');
 		var idNumber = infoID.substr('information'.length);
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 	});
 
-	$('.information #drop').click(function(e) {
+	$('.information .drop').click(function(e) {
 		var infoID = $(this).closest('.information').attr('id');
 		var idNumber = infoID.substr('information'.length);
 

@@ -50,19 +50,24 @@
 				}
 				</script>
 				<br>
-				<button class="apt-delete" type="button">Cancel appointment</button>
-				<button type="button" id="drop">Cancel appointment</button>
+				<button type="button" class="delete" id="apt-delete{{id}}">Cancel appointment</button>
+				<button type="button" class="drop" id="drop{{id}}">Cancel appointment</button>
 				<script>
 				var length = 0;
 				{{#each owner}}
 					length++;
+					console.log(length);
 				{{/each}}
 				
 				if (length > 1){
-					$('#drop').show();
+					$('#apt-delete{{id}}').hide();
+					$('#drop{{id}}').show();
+					
 				}
 				else {
-					$('.apt-delete').show();
+					$('#drop{{id}}').hide();
+					$('#apt-delete{{id}}').show();
+					
 				}
 				</script>
 				<br>
