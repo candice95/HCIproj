@@ -31,8 +31,9 @@ exports.addAppointment = function(req, res) {
 
 exports.joinAppointment = function(req, res) {
   var aptID = req.params.id;
+  var email = req.cookies.email;
 
-  models.Appointment.update({ _id: aptID }, { $set: {owner: 'thisuser'}}, afterUpdating)
+  models.Appointment.update({ _id: aptID }, { $push: {'owner': email} }, afterUpdating)
 
   function afterUpdating(err) {
     if(err) { console.log(err); }

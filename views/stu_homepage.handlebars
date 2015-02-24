@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/stu_homepage.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/stuFunc.js"></script>
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
 
@@ -18,7 +19,7 @@
 		<div class="row">
 			<div class="col-xs-2"></div>
 			<div class="col-xs-8" align="center">
-				<button id="make" class="btn" onclick="makeFunc()">Make appointments</button>
+				<button id="make" class="btn" onclick="makeFunc()">Make Appointments</button>
 			</div>
 			<div class="col-xs-2" id="logoutdiv">
 				<img src='images/brownlogout.png' id="logout" onclick="logoutFunc()">
@@ -30,6 +31,7 @@
 	
 	<div class="container">	
 		<h2>My Appointments</h2>
+		{{#if allapt}}
 		{{#each allapt}}
 		<div class="container-fluid" id="appt">
 			<div class="information" id="information{{id}}">
@@ -37,21 +39,39 @@
 				<h4>{{date}} {{time}}</h4>
 				Professor: {{professor}}<br>
 				Location: {{location}}<br>
+				Email: {{email}}<br>
 				Appointment type: {{type}}<br>
 				
 				<h5 id="madeby{{id}}">Made by: {{name}}<h5>
 				<script>
-				if ("{{origowner}}" == "thisuser"){
+				var email = readCookie("email");
+				if ("{{email}}" == email){
 					document.getElementById("madeby{{id}}").innerHTML = "Made by: You";
 				}
 				</script>
 				<br>
-				<button class="apt-delete" type="button">cancel appointment</button>
+				<button class="apt-delete" type="button">Cancel appointment</button>
+				<button type="button" id="drop">Cancel appointment</button>
+				<script>
+				var length = 0;
+				{{#each owner}}
+					length++;
+				{{/each}}
 				
+				if (length > 1){
+					$('#drop').show();
+				}
+				else {
+					$('.apt-delete').show();
+				}
+				</script>
 				<br>
 			</div>
 		</div>	
-			{{/each}}
+		{{/each}}
+		{{else}}
+		<div id="empty">You have no active appointments.<p><br>Click on Make Appointments to join an already existing public appointment or create your own.</p></div>
+		{{/if}}
 	</div>
 
 	<div id="popCancel" title="Confirm cancel">
@@ -59,9 +79,15 @@
 		<button id="confirmCancel">Yes, cancel my appointment.</button>
 		<button id="noCancel">No, thanks</button>
 	</div>
+
+	<div id="popDrop" title="Confirm cancel">
+		<p><font face="Georgia" size="4">Are you sure to cancel this appointment?</font></p>
+		<button id="confirmDrop">Yes, cancel my appointment.</button>
+		<button id="noDrop">No, thanks</button>
+	</div>
 	
 	<!--<script src="https://code.jquery.com/jquery.js"></script>-->
-	<script src="js/stuFunc.js"></script>
+	
 	<script src="js/popup.js"></script>
 	<script src="js/stu_homepage.js"></script>
 </body>

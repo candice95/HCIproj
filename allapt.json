@@ -8,8 +8,8 @@
 		"professor": "Scott Klemmer",
 		"location": "Atkinson Hall 5204",
 		"type": "Public",
-		"owner": "thisuser",
-		"origowner": "thisuser"
+		"owner": ["other"],
+		"origowner": "other"
 	},
 	{
 		"date": "Thu 2/29/2015",
@@ -20,7 +20,7 @@
 		"professor": "Scott Klemmer",
 		"location": "Atkinson Hall 5204",
 		"type": "Private",
-		"owner": "other",
+		"owner": ["other"],
 		"origowner": "other"
 	},
 	{
@@ -32,7 +32,7 @@
 		"professor": "Scott Klemmer",
 		"location": "Atkinson Hall 5204",
 		"type": "Public",
-		"owner": "other",
+		"owner": ["other"],
 		"origowner": "other"
 	},
 	{
@@ -44,7 +44,7 @@
 		"professor": "Scott Klemmer",
 		"location": "Atkinson Hall 5204",
 		"type": "Public",
-		"owner": "other",
+		"owner": ["other"],
 		"origowner": "other"
 	}
 ]

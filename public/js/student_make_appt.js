@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$( "#popMake" ).dialog( "open" );
 
 		var name = $('#inputname #name').val();
-		var email = $('#inputname #email').val();
+		var email = readCookie("email");
 		var description = $('#inputname #description').val();
 		var type = $("input:radio[name=type]:checked").val();
 		console.log(type);
@@ -24,7 +24,7 @@ $(document).ready(function(){
 			'professor': 'Scott Klemmer',
 			'location': 'Atkinson Hall 5204',
 			'type': type,
-			'owner': 'thisuser',
+			'owner': email,
 			'origowner': 'thisuser'
 		};
 
