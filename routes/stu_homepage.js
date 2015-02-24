@@ -35,8 +35,7 @@ exports.deleteApt = function(req, res) {
 exports.dropApt = function(req, res) {
 	var aptID = req.params.id;
 	var email = req.cookies.email;
-
-	models.Appointment.update({ _id: aptID }, { $pull: {'owner': email} }, dropCallback)
+	models.Appointment.update({ _id: aptID }, { $pull: {'owner': email}}, dropCallback)
 
 	function dropCallback(err) {
 		if(err) { console.log(err); }

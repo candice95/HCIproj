@@ -7,7 +7,7 @@ exports.view = function(req, res){
 
 	models.Appointment
 		.find({"type": "Public"})
-    .sort('-date')
+    .sort('date')
 		.exec(renderAppointments);
 
 	function renderAppointments(err, allapt) {
