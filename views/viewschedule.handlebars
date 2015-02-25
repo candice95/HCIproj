@@ -14,14 +14,15 @@
 </head>
 
 <body>
+	<div id="header">
 	<div class="container-fluid" id="navbuttons">
 		<div class="row">
 			<div class="col-xs-2">
 				<!--<img src='images/brownhome.png' id="home" onclick="homeFunc()">-->
 				<!--<button class="btn" id="home" onclick="homeFunc()">Home</button>-->
 			</div>
-			<div class="col-xs-8" align="center">
-				<button class="btn" id="calendarbtn">Create An Appointment</button>
+			<div class="col-xs-8" align="center">				
+				<button class="btn" id="viewbtn" onclick="backshFunc()">View my appoinments</button>
 			</div>
 			<div class="col-xs-2" id="logoutdiv">
 				<img src='images/brownlogout.png' id="logout" onclick="logoutFunc()">
@@ -31,7 +32,7 @@
 		<div class="row" id="viewrow">
 			<div class="col-xs-2"></div>
 			<div class="col-xs-8" align="center">
-				<button class="btn" id="viewbtn" onclick="backshFunc()">View my appoinments</button>
+				<button class="btn" id="calendarbtn">Create An Appointment</button>
 			</div>
 			<div class="col-xs-2">
 			</div>
@@ -40,7 +41,8 @@
 	
 	<div class="container" id="calendardiv">
 		<div id="calendar"></div>
-		<h6 align="center">Please click on an available time slot to begin making an appointment</h6>
+		<h6 id="calinfo" align="center">Please click on an available time slot to begin making an appointment</h6>
+	</div>
 	</div>
 	
 	<div class ="container" id="public-appt">

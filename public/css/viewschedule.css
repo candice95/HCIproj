@@ -12,6 +12,18 @@ h3 {
   color: #A0522d;
 }
 
+#header {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  z-index: 10;
+  background: inherit;
+}
+
+#public-appt{
+  padding-top: 110px;
+}
+
 #calendar{
 	background-color: #FFF5EE;
 }
@@ -72,6 +84,12 @@ h3 {
 #calendardiv {
   margin-top: 1.1em;
   display: none;
+  background: #FFF5EE;
+}
+
+#calinfo{
+  background: #FFF5EE;
+  padding-bottom: 10px;
 }
 
 .fc-title {
