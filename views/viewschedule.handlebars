@@ -17,7 +17,7 @@
 	<div class="container-fluid" id="navbuttons">
 		<div class="row">
 			<div class="col-xs-2">
-				<img src='images/brownhome.png' id="home" onclick="homeFunc()">
+				<!--<img src='images/brownhome.png' id="home" onclick="homeFunc()">-->
 				<!--<button class="btn" id="home" onclick="homeFunc()">Home</button>-->
 			</div>
 			<div class="col-xs-8" align="center">
@@ -28,6 +28,14 @@
 				<!--<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>-->
 			</div>
 		</div>
+		<div class="row" id="viewrow">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8" align="center">
+				<button class="btn" id="viewbtn" onclick="backshFunc()">View my appoinments</button>
+			</div>
+			<div class="col-xs-2">
+			</div>
+		</div>
 	</div>
 	
 	<div class="container" id="calendardiv">
@@ -35,12 +43,9 @@
 		<h6 align="center">Please click on an available time slot to begin making an appointment</h6>
 	</div>
 	
-	
-
-	<h3 align="center">Public Appointments</h3>
-
 	<div class ="container" id="public-appt">
 	
+	<h3 align="center">Public Appointments</h3>
 	{{#each allapt}}
 	<div class="container-fluid" id="appt">
 		<div class="row">

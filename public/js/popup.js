@@ -7,7 +7,7 @@ function backFunc(){
 }
 
 function homeFunc(){
-	window.location.href='/stu_homepage';
+	window.location.href='/viewschedule';
 }
 
 function logoutFunc(){

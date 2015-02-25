@@ -17,7 +17,9 @@
 <body>
 	<div class="container-fluid" id="navbuttons">
 		<div class="row">
-			<div class="col-xs-2"></div>
+			<div class="col-xs-2">
+				<img src='images/brownhome.png' id="home" onclick="homeFunc()">
+			</div>
 			<div class="col-xs-8" align="center">
 				<button id="make" class="btn" onclick="makeFunc()">Make Appointments</button>
 			</div>
@@ -26,9 +28,7 @@
 				<!--<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>-->
 			</div>
 		</div>
-	</div>
-	<h1>Welcome, Student!</h1>	
-	
+	</div>	
 	<div class="container">	
 		<h2>My Appointments</h2>
 		{{#if allapt}}

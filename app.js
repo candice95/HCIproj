@@ -56,7 +56,7 @@ app.get('/cancelapt', cancelapt.view);
 app.get('/confirmCancel', confirmCancel.view);
 app.get('/professorhome', professorhome.view);
 app.get('/stu_homepage', stu_homepage.view);
-app.post('/stu_homepage', stu_homepage.view);
+app.post('/viewschedule', viewschedule.view);
 app.get('/student_make_appt', student_make_appt.view);
 app.post('/viewschedule/new', viewschedule.addAppointment);
 app.post('/stu_homepage/:id/drop', stu_homepage.dropApt);
