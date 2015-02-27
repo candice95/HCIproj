@@ -30,17 +30,33 @@ body {
   margin-bottom: 15px;
 }
 
+#header {
+  border: 3px ridge #A0522d;
+  box-shadow: 5px 5px 2px #888888;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 10;
+  background: inherit;
+}
+
+#myapt {
+  padding-top: 70px;
+}
+
 #navbuttons {
   margin: 0.2em;
   margin-left: 15px;
 }
 
 .delete {
-  display: none;
+  color: red;
+  font-size: 1.5em;
 }
 
 .drop {
-  display: none;
+  color: red;
+  font-size: 1.5em;
 }
 
 #logoutlabel{
@@ -55,9 +71,6 @@ body {
 
 .logouticon {
   font-size: 2em;
-}
-
-.glyphicon {
   color: #A0522d;
 }
 

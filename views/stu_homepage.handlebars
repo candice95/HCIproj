@@ -15,21 +15,24 @@
 </head>
 
 <body>
-	<div class="container-fluid" id="navbuttons">
-		<div class="row">
-			<div class="col-xs-2">
-				<img src='images/brownhome.png' id="home" onclick="homeFunc()">
-			</div>
-			<div class="col-xs-8" align="center">
-				<button id="make" class="btn" onclick="makeFunc()">Make Appointments</button>
-			</div>
-			<div class="col-xs-2" id="logoutdiv">
+	<div id="header">
+		<div class="container-fluid" id="navbuttons">
+			<div class="row">
+				<div class="col-xs-2">
+					<img src='images/brownhome.png' id="home" onclick="homeFunc()">
+				</div>
+				<div class="col-xs-8" align="center">
+					<button id="make" class="btn" onclick="makeFunc()">Make Appointments</button>
+				</div>
+				<div class="col-xs-2" id="logoutdiv">
 					<span class="glyphicon glyphicon-off logouticon" aria-hidden="true" onclick="logoutFunc()"></span>
 					<div id="logoutlabel">Logout</div>
+				</div>
 			</div>
 		</div>
-	</div>	
-	<div class="container">	
+	</div>
+
+	<div class="container" id="myapt">	
 		<h2>My Appointments</h2>
 		{{#if allapt}}
 		{{#each allapt}}
@@ -49,8 +52,14 @@
 				}
 				</script>
 				<br>
-				<button type="button" class="delete" id="apt-delete{{id}}">Cancel appointment</button>
-				<button type="button" class="drop" id="drop{{id}}">Cancel appointment</button>
+				<div id="apt-delete{{id}}" style="color: #A0522d;" align="right">
+				<span class="glyphicon glyphicon-remove-circle delete" aria-hidden="true"></span>
+				Cancel Appointment</div>
+				<div id="drop{{id}}" style="color: #A0522d;" align="right">
+				<span class="glyphicon glyphicon-remove-circle drop" aria-hidden="true"></span>
+				Cancel Appointment</div>
+				<!--<button type="button" class="delete" id="apt-delete{{id}}">Cancel appointment</button>
+				//<button type="button" class="drop" id="drop{{id}}">Cancel appointment</button>-->
 				<script>
 				var length = 0;
 				{{#each owner}}
@@ -69,7 +78,6 @@
 					
 				}
 				</script>
-				<br>
 			</div>
 		</div>	
 		{{/each}}

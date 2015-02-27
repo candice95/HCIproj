@@ -75,8 +75,17 @@
 				</div>
 				<br>
 				<form action="" id="typeSelect">
-					<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-					Appointment Type:<br>
+						<span class="glyphicon glyphicon-info-sign" onclick="overlay()" aria-hidden="true"></span>
+					
+					<div id="overlay">						
+						<div id="infodiv">
+							<div id="closediv">
+								<span class="glyphicon glyphicon-remove" onclick="overlay()" aria-hidden="true"></span>
+							</div>
+         					<p>Public appointments are visible to all other users, who can join to come along with you to see the professor. You can join other public appointments too!</p>
+         					<p>Private appointments are only visible to the professor. No other user will see it or be able to join it. You can not see or join other private appointments either.</p>
+    					 </div>
+					</div>Appointment Type:<br>
 					<div id="radiobtns">
 						<input type="radio" name="type" value="Public" checked>Public (allow other students to join your appointment)<br>
 						<input type="radio" name="type" value="Private">Private (have a one on one appointment)
@@ -89,7 +98,6 @@
 	</div>
 	
 	<div class ="container" id="public-appt">
-	
 	<h3 align="center">Public Appointments</h3>
 	{{#each allapt}}
 	<div class="container-fluid" id="appt">
@@ -127,8 +135,8 @@
       						{{/each}}
 							if (contained){
 								document.getElementById("joinbtn{{id}}").disabled = true;
-								document.getElementById("joinbtn{{id}}").style.backgroundColor = "#C69781";
-								document.getElementById("joinbtn{{id}}").style.borderColor = "#C69781";
+								document.getElementById("joinbtn{{id}}").style.backgroundColor = "#D0A896";
+								document.getElementById("joinbtn{{id}}").style.borderColor = "#D0A896";
 								document.getElementById("joinbtn{{id}}").style.padding = "7px 13px 7px 13px";
 								document.getElementById("joinbtn{{id}}").innerHTML = "Joined";
 							}

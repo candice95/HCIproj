@@ -85,13 +85,14 @@ h3 {
 }
 
 #dropdowndiv {
-  margin-top: 1.1em;
+  margin-top: 1.2em;
   display: none;
   background: #FFF5EE;
   border: 3px ridge #A0522d;
   border-top-style: none;
   box-shadow: 5px 5px 2px #888888;
   color: #A0522d;
+  z-index: 5;
 }
 
 #calinfo{
@@ -112,10 +113,6 @@ textarea {
   resize: none;
 }
 
-.glyphicon {
-  color: #A0522d;
-}
-
 #radiobtns {
   padding-left: 2em;
 }
@@ -132,4 +129,34 @@ textarea {
 
 .logouticon {
   font-size: 2em;
+  color: #A0522d;
+}
+
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     padding-top:1em;
+}
+
+#overlay #infodiv {
+     width:300px;
+     margin: 100px auto;
+     background-color: #A0522D;
+     border:1px solid #000;
+     padding:15px;
+     padding-top:0px;
+     text-align:center;
+     color: #fff5ee;
+}
+
+#closediv{
+  text-align: left;
+  color: #fff5ee;
+  margin-left:-10px;
 }
