@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Create or Browse Appointments</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/stuFunc.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/viewaltschedule.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+	<div id="header">
+		<div class="container-fluid" id="navbuttons">
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-8" align="center">				
+					<button class="btn" id="viewbtn" onclick="backshFunc()">View My Appoinments</button>
+				</div>
+				<div class="col-xs-2" id="logoutdiv">
+					<img src='images/brownlogout.png' id="logout" onclick="logoutFunc()">
+				</div>
+			</div>
+			<div class="row" id="viewrow">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-8" align="center">
+					<button class="btn" id="formbtn">Create A New Appointment</button>
+				</div>
+				<div class="col-xs-2"></div>
+			</div>
+		</div>
+	
+		<div class="container" id="dropdowndiv">
+			<h4 align="center"><strong>Create A New Appointment</strong></h4>
+			<form id="inputname" role="form">
+				<div class="row">
+					<div class="col-xs-1"></div>
+					<div class="col-xs-4">
+						<select class="date" id="date">
+							<option selected disabled>Select a Date</option>
+							<option value="w6">Thu 2/12/2015</option>
+							<option value="w7">Thu 2/19/2015</option>
+							<option value="w8">Thu 2/26/2015</option>
+							<option value="w9">Thu 3/5/2015</option>
+							<option value="w10">Thu 3/12/2015</option>
+							<option value="w11">Thu 3/19/2015</option>
+						</select>				
+					</div>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-4">
+						<select class="time" id="time">
+							<option selected disabled>Select a Time</option>
+							<option value="1">2:00-2:15pm</option>
+							<option value="2">2:15-2:30pm</option>
+							<option value="3">2:30-2:45pm</option>
+							<option value="4">2:45-3:00pm</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<div class="name">
+					Name: 
+					<input type="text" id="name" placeholder="Full Name" name="name">
+				</div>
+				<br>
+				<div class="description">
+					Description:
+					<textarea maxlength="200" rows="3" cols="40" id="description" placeholder="What is the purpose of your appointment?"></textarea>
+				</div>
+				<br>
+				<form action="" id="typeSelect">
+					<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+					Appointment Type:<br>
+					<div id="radiobtns">
+						<input type="radio" name="type" value="Public" checked>Public (allow other students to join your appointment)<br>
+						<input type="radio" name="type" value="Private">Private (have a one on one appointment)
+					</div>
+				</form>
+				<br>
+				<center><input type="submit" value="Submit" class="smallbtn" id="submit"></center><br>
+			</form>
+		</div>
+	</div>
+	
+	<div class ="container" id="public-appt">
+	
+	<h3 align="center">Public Appointments</h3>
+	{{#each allapt}}
+	<div class="container-fluid" id="appt">
+		<div class="row">
+			<div class="col-xs-3" id="labels">
+				<p>Name:</p>
+				<hr>
+				<p>Date:</p>
+				<hr>
+				<p>Time:</p>
+				<hr>
+			</div>
+  			<div class="col-xs-8" id="apt-background">
+    			<div class="row">
+      				<div class="col-xs-8" id="namedate">
+        				<p>{{name}}</p>
+        				<hr>
+        				<p>{{date}}</p>
+        				<hr>
+        				<p>{{time}}</p>
+        				<hr>
+      				</div>
+      				
+      				<div class="col-xs-4" id="div{{id}}">
+      					<button id="joinbtn{{id}}" class="joinbutton smallbtn" >Join</button>
+      					<script>
+      						var email = readCookie("email");
+      						var contained = 0;
+      						console.log(email);
+
+      						{{#each owner}}
+      							if (email == "{{this}}"){
+      								contained = 1;
+      							}
+      						{{/each}}
+							if (contained){
+								document.getElementById("joinbtn{{id}}").style.visibility = "hidden";
+							}
+						</script>
+      				</div>
+      				<div class="col-xs-4 joined{{id}}" id="joined">Appointment joined</div>
+    			</div>
+  			</div>
+  			<div class="col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<p>Description:</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10" id="desc">
+				<p>{{description}}</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+	
+	</div>
+
+	<div id="popMake" title="Made Successfully">
+		<p><font face="Georgia" size="4">Your Appointment Has Been Made!</font></p>
+		<h4 id="aptdate"></h4>
+		<h4 id="apttime"></h4>
+	</div>
+		
+	<script src="js/popup.js"></script>
+	<script src="js/viewaltschedule.js"></script>
+</body>
+</html>

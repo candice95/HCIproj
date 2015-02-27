@@ -40,7 +40,7 @@ $('.joinbutton').click(function(){
 });
 
 $('#calendarbtn').click(function(){
-	if ($(this).text() == 'Create An Appointment'){
+	if ($(this).text() == 'Create A New Appointment'){
 		$(this).text("Hide Calendar");
 		$('#calendardiv').height('0em');
 		$('#calendardiv').show().animate({height: '+=2em'}, 500);
@@ -48,7 +48,7 @@ $('#calendarbtn').click(function(){
 		$('#calendar').fullCalendar('render');
 	}
 	else {
-		$(this).text("Create An Appointment");
+		$(this).text("Create A New Appointment");
 		$('#calendardiv').slideUp(500);		
 	}
 });

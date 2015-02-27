@@ -17,6 +17,7 @@ var confirmCancel = require('./routes/confirmCancel');
 var professorhome = require('./routes/professorhome');
 var stu_homepage = require('./routes/stu_homepage');
 var student_make_appt = require('./routes/student_make_appt');
+var viewaltschedule = require('./routes/viewaltschedule');
 
 // Example route
 // var user = require('./routes/user');
@@ -52,16 +53,20 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/viewschedule', viewschedule.view);
+app.get('/viewaltschedule', viewaltschedule.view);
 app.get('/cancelapt', cancelapt.view);
 app.get('/confirmCancel', confirmCancel.view);
 app.get('/professorhome', professorhome.view);
 app.get('/stu_homepage', stu_homepage.view);
-app.post('/viewschedule', viewschedule.view);
 app.get('/student_make_appt', student_make_appt.view);
-app.post('/viewschedule/new', viewschedule.addAppointment);
 app.post('/stu_homepage/:id/drop', stu_homepage.dropApt);
 app.post('/stu_homepage/:id/delete', stu_homepage.deleteApt);
+app.post('/viewschedule', viewschedule.view);
+app.post('/viewschedule/new', viewschedule.addAppointment);
 app.post('/viewschedule/:id/join', viewschedule.joinAppointment);
+app.post('/viewaltschedule', viewaltschedule.view);
+app.post('/viewaltschedule/new', viewaltschedule.addAppointment);
+app.post('/viewaltschedule/:id/join', viewaltschedule.joinAppointment);
 
 // Example route
 // app.get('/users', user.list);
