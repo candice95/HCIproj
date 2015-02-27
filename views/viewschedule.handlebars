@@ -15,34 +15,31 @@
 
 <body>
 	<div id="header">
-	<div class="container-fluid" id="navbuttons">
-		<div class="row">
-			<div class="col-xs-2">
-				<!--<img src='images/brownhome.png' id="home" onclick="homeFunc()">-->
-				<!--<button class="btn" id="home" onclick="homeFunc()">Home</button>-->
+		<div class="container-fluid" id="navbuttons">
+			<div class="row">
+				<div class="col-xs-2" align="center"></div>
+				<div class="col-xs-8" align="center">				
+					<button class="btn" id="viewbtn" onclick="backshFunc()">View My Appointments</button>
+				</div>
+				<div class="col-xs-2" id="logoutdiv">
+					<span class="glyphicon glyphicon-off logouticon" aria-hidden="true" onclick="logoutFunc()"></span>
+					<div id="logoutlabel">Logout</div>
+				</div>
 			</div>
-			<div class="col-xs-8" align="center">				
-				<button class="btn" id="viewbtn" onclick="backshFunc()">View My Appointments</button>
-			</div>
-			<div class="col-xs-2" id="logoutdiv">
-				<img src='images/brownlogout.png' id="logout" onclick="logoutFunc()">
-				<!--<button class="btn" id="logout" onclick="logoutFunc()">Log Out</button>-->
-			</div>
-		</div>
-		<div class="row" id="viewrow">
-			<div class="col-xs-2"></div>
-			<div class="col-xs-8" align="center">
-				<button class="btn" id="calendarbtn">Create A New Appointment</button>
-			</div>
-			<div class="col-xs-2">
+			<div class="row" id="viewrow">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-8" align="center">
+					<button class="btn" id="calendarbtn">Create A New Appointment</button>
+				</div>
+				<div class="col-xs-2">
+				</div>
 			</div>
 		</div>
-	</div>
 	
-	<div class="container" id="calendardiv">
-		<div id="calendar"></div>
-		<h6 id="calinfo" align="center">Please click on an available time slot to begin making an appointment</h6>
-	</div>
+		<div class="container" id="calendardiv">
+			<div id="calendar"></div>
+			<h6 id="calinfo" align="center">Please click on an available time slot to begin making an appointment</h6>
+		</div>
 	</div>
 	
 	<div class ="container" id="public-appt">
@@ -83,7 +80,11 @@
       							}
       						{{/each}}
 							if (contained){
-								document.getElementById("joinbtn{{id}}").style.visibility = "hidden";
+								document.getElementById("joinbtn{{id}}").disabled = true;
+								document.getElementById("joinbtn{{id}}").style.backgroundColor = "#C69781";
+								document.getElementById("joinbtn{{id}}").style.borderColor = "#C69781";
+								document.getElementById("joinbtn{{id}}").style.padding = "7px 13px 7px 13px";
+								document.getElementById("joinbtn{{id}}").innerHTML = "Joined";
 							}
 						</script>
       				</div>
@@ -106,10 +107,7 @@
 	{{/each}}
 	
 	</div>
-	<br>
-	
-	
-	
+
 	<script src='fullcalendar/lib/moment.min.js'></script>
 	<script src='fullcalendar/fullcalendar.js'></script>
 	<script src="js/popup.js"></script>

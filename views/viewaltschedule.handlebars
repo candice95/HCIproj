@@ -18,12 +18,13 @@
 	<div id="header">
 		<div class="container-fluid" id="navbuttons">
 			<div class="row">
-				<div class="col-xs-2"></div>
+				<div class="col-xs-2" align="center"></div>
 				<div class="col-xs-8" align="center">				
 					<button class="btn" id="viewbtn" onclick="backshFunc()">View My Appoinments</button>
 				</div>
 				<div class="col-xs-2" id="logoutdiv">
-					<img src='images/brownlogout.png' id="logout" onclick="logoutFunc()">
+					<span class="glyphicon glyphicon-off logouticon" aria-hidden="true" onclick="logoutFunc()"></span>
+					<div id="logoutlabel">Logout</div>
 				</div>
 			</div>
 			<div class="row" id="viewrow">
@@ -125,7 +126,11 @@
       							}
       						{{/each}}
 							if (contained){
-								document.getElementById("joinbtn{{id}}").style.visibility = "hidden";
+								document.getElementById("joinbtn{{id}}").disabled = true;
+								document.getElementById("joinbtn{{id}}").style.backgroundColor = "#C69781";
+								document.getElementById("joinbtn{{id}}").style.borderColor = "#C69781";
+								document.getElementById("joinbtn{{id}}").style.padding = "7px 13px 7px 13px";
+								document.getElementById("joinbtn{{id}}").innerHTML = "Joined";
 							}
 						</script>
       				</div>

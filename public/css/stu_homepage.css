@@ -35,15 +35,29 @@ body {
   margin-left: 15px;
 }
 
-#logoutdiv {
-  padding-left: 0px;
-}
-
 .delete {
   display: none;
 }
 
 .drop {
   display: none;
+}
+
+#logoutlabel{
+  color: #A0522d;
+}
+
+#logoutdiv{
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+.logouticon {
+  font-size: 2em;
+}
+
+.glyphicon {
+  color: #A0522d;
 }
 

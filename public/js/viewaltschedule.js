@@ -40,8 +40,17 @@ $('.joinbutton').click(function(){
 	var idNumber = infoID.substr('div'.length);
 	console.log(idNumber);
 
-	$('#'+ infoID).animate({ opacity: 0 });
-	$('.joined' + idNumber).show();
+	//$('#'+ infoID).animate({ opacity: 0 });
+	$('#joinbtn' + idNumber).css({
+		"background-color": "#C69781",
+		"border-color": "#C69781",
+		"padding": "7px 13px 7px 13px"
+	});
+
+	$('#joinbtn' + idNumber).prop('disabled', true);
+	$('#joinbtn' + idNumber).text("Joined");
+
+	$('#joinbtn' + idNumber).show();
 
 	$.post('/viewaltschedule/'+idNumber+'/join', function() {
 	});
@@ -59,6 +68,8 @@ $('#formbtn').click(function(){
 		$('#dropdowndiv').slideUp(500);		
 	}
 });
+
+
 
 
 

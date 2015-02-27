@@ -32,7 +32,16 @@ $('.joinbutton').click(function(){
 	var idNumber = infoID.substr('div'.length);
 	console.log(idNumber);
 
-	$('#'+ infoID).animate({ opacity: 0 });
+	//$('#'+ infoID).animate({ opacity: 0 });
+	$('#joinbtn' + idNumber).css({
+		"background-color": "#C69781",
+		"border-color": "#C69781",
+		"padding": "7px 13px 7px 13px"
+	});
+
+	$('#joinbtn' + idNumber).prop('disabled', true);
+	$('#joinbtn' + idNumber).text("Joined");
+
 	$('.joined' + idNumber).show();
 
 	$.post('/viewschedule/'+idNumber+'/join', function() {
