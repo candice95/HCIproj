@@ -49,17 +49,6 @@ $("#back").click(function(){
     $('#inputs').find('input:password').val('');
 });
 
-/*$("#link").click(function(){
-    event.preventDefault();
-    newLocation = this.href;
-    $('body').animate({marginLeft: '-200%'}, 800);
-    $('body').fadeOut(newpage);
-});
-
-function newpage(){
-    window.location = newLocation;
-}*/
-
 function newCookie(name,value,days) {
     var days = 10;
 

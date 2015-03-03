@@ -1,29 +1,37 @@
 $(document).ready(function() {
-	$('#calendar').fullCalendar({
-		allDaySlot: false,
-		defaultView: 'agendaWeek',
-		fixedWeekCount: false,
-		header: {
-			left: 'today',
-			center: 'title',
-			right: 'prev,next'
-		},
-		minTime: "08:00:00",
-		maxTime: "20:00:00",
-		scrollTime: '11:00:00',
-		weekends: false,
-		events: [
-		{
-			title: "Click to set appointment",
-			start:'2015-02-26T12:00:00',
-			end:'2015-02-26T15:00:00'
-		}
-		],
+	$( "#popMake" ).dialog({ autoOpen: false });
+	
+	$( "#submit" ).click(function() {
+		var date = $("#date option:selected").text();
+		var time = $("#time option:selected").text();
+		document.getElementById("aptdate").innerHTML = date;
+		document.getElementById("apttime").innerHTML = time;
+		$( "#popMake" ).dialog( "open" );
 
-	    eventClick: function(calEvent, jsEvent, view) {
-			window.location.href='/student_make_appt';
-	    }
-	}); 
+		var name = $('#inputname #name').val();
+		var email = readCookie("email");
+		var description = $('#inputname #description').val();
+		var type = $("input:radio[name=type]:checked").val();
+		console.log(type);
+		var json = {
+			'date': date,
+			'time': time,
+			'name': name,
+			'email': email,
+			'description': description,
+			'professor': 'Scott Klemmer',
+			'location': 'Atkinson Hall 5204',
+			'type': type,
+			'owner': email,
+			'origowner': 'thisuser'
+		};
+
+		$(".ui-button-icon-primary.ui-icon.ui-icon-closethick").click(function(){
+			$.post('/viewschedule/new', json, function(){
+				window.location.href = '/viewschedule';
+			});
+		});
+	});
 });
 
 $('.joinbutton').click(function(){
@@ -42,25 +50,30 @@ $('.joinbutton').click(function(){
 	$('#joinbtn' + idNumber).prop('disabled', true);
 	$('#joinbtn' + idNumber).text("Joined");
 
-	$('.joined' + idNumber).show();
+	$('#joinbtn' + idNumber).show();
 
-	$.post('/viewschedule/'+idNumber+'/join', function() {
+	$.post('/viewaltschedule/'+idNumber+'/join', function() {
 	});
 });
 
-$('#calendarbtn').click(function(){
+$('#formbtn').click(function(){
 	if ($(this).text() == 'Create A New Appointment'){
-		$(this).text("Hide Calendar");
-		$('#calendardiv').height('0em');
-		$('#calendardiv').show().animate({height: '+=2em'}, 500);
-		$('#calendardiv').stop().animate({height:'25em'});
-		$('#calendar').fullCalendar('render');
+		$(this).text("Hide Form");
+		$('#dropdowndiv').height('0em');
+		$('#dropdowndiv').show().animate({height: '+=2em'}, 500);
+		$('#dropdowndiv').stop().animate({height:'28em'});
 	}
 	else {
 		$(this).text("Create A New Appointment");
-		$('#calendardiv').slideUp(500);		
+		$('#dropdowndiv').slideUp(500);		
 	}
 });
+
+function overlay() {
+	el = document.getElementById("overlay");
+	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+};
+
 
 
 

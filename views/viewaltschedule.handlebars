@@ -74,18 +74,19 @@
 					<textarea maxlength="200" rows="3" cols="40" id="description" placeholder="What is the purpose of your appointment?"></textarea>
 				</div>
 				<br>
+
 				<form action="" id="typeSelect">
-						<span class="glyphicon glyphicon-info-sign" onclick="overlay()" aria-hidden="true"></span>
-					
 					<div id="overlay">						
 						<div id="infodiv">
 							<div id="closediv">
 								<span class="glyphicon glyphicon-remove" onclick="overlay()" aria-hidden="true"></span>
 							</div>
-         					<p>Public appointments are visible to all other users, who can join to come along with you to see the professor. You can join other public appointments too!</p>
+         					<p>Public appointments are visible to all other users. By selecting this, any user can join to come along with you to see the professor. You can join other public appointments too!</p>
          					<p>Private appointments are only visible to the professor. No other user will see it or be able to join it. You can not see or join other private appointments either.</p>
     					 </div>
-					</div>Appointment Type:<br>
+					</div>
+						<div class="col-xs-6">Appointment Type:</div>
+						<div class="col-xs-6" align="right"><span class="glyphicon glyphicon-question-sign" onclick="overlay()" aria-hidden="true"></span><a href="#" onclick="overlay()"> What's this?</a><br></div>
 					<div id="radiobtns">
 						<input type="radio" name="type" value="Public" checked>Public (allow other students to join your appointment)<br>
 						<input type="radio" name="type" value="Private">Private (have a one on one appointment)

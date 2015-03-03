@@ -1,5 +1,6 @@
 body {
     background-color: #FFF5EE;
+
 }
 
 hr {
@@ -13,13 +14,13 @@ h3 {
 }
 
 #header {
+  border: 3px ridge #A0522d;
+  box-shadow: 5px 5px 2px #888888;
   width: 100%;
   height: 120px;
   position: fixed;
   z-index: 10;
   background: inherit;
-  border: 3px ridge #A0522d;
-  box-shadow: 5px 5px 2px #888888;
 }
 
 #public-appt{
@@ -34,7 +35,7 @@ h3 {
 	font-size: 1.7em;
 }
 
-.joinbutton {
+.smallbtn {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
   border-radius: 10px;
@@ -83,11 +84,15 @@ h3 {
   display: none;
 }
 
-#calendardiv {
+#dropdowndiv {
   margin-top: 1.2em;
   display: none;
   background: #FFF5EE;
-  z-index: 7;
+  border: 3px ridge #A0522d;
+  border-top-style: none;
+  box-shadow: 5px 5px 2px #888888;
+  color: #A0522d;
+  z-index: 5;
 }
 
 #calinfo{
@@ -104,6 +109,14 @@ h3 {
   margin-left: 15px;
 }
 
+textarea {
+  resize: none;
+}
+
+#radiobtns {
+  padding-left: 2em;
+}
+
 #logoutlabel{
   color: #A0522d;
 }
@@ -116,8 +129,34 @@ h3 {
 
 .logouticon {
   font-size: 2em;
+  color: #A0522d;
 }
 
-.glyphicon {
-  color: #A0522d;
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     padding-top:1em;
+}
+
+#overlay #infodiv {
+     width:300px;
+     margin: 90px auto;
+     background-color: #A0522D;
+     border:1px solid #000;
+     padding:15px;
+     padding-top:1px;
+     text-align:center;
+     color: #fff5ee;
+}
+
+#closediv{
+  text-align: left;
+  color: #fff5ee;
+  margin-left:-10px;
 }

@@ -67,6 +67,7 @@ app.post('/viewschedule/:id/join', viewschedule.joinAppointment);
 app.post('/viewaltschedule', viewaltschedule.view);
 app.post('/viewaltschedule/new', viewaltschedule.addAppointment);
 app.post('/viewaltschedule/:id/join', viewaltschedule.joinAppointment);
+app.post('/professorhome', professorhome.view);
 
 // Example route
 // app.get('/users', user.list);
