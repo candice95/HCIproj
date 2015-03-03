@@ -33,51 +33,86 @@
 	</div>
 
 	<div class="container" id="myapt">	
-		<h2>My Appointments</h2>
+		<h2 align="center">My Appointments</h2>
 		{{#if allapt}}
 		{{#each allapt}}
 		<div class="container-fluid" id="appt">
 			<div class="information" id="information{{id}}">
-
-				<h4>{{date}} {{time}}</h4>
-				Professor: {{professor}}<br>
-				Location: {{location}}<br>
-				Appointment type: {{type}}<br>
+				<h3>{{date}} {{time}}</h3>
+				<div class="row">
+					<div class="col-xs-6">
+						<p>Professor:</p>
+						<hr>
+						<p>Location:</p>
+						<hr>
+						<p>Appointment type:</p>
+						<hr>
+					</div>
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="col-xs-12">
+								<p>{{professor}}</p>
+								<hr>
+								<p>{{location}}</p>
+								<hr>
+								<p>{{type}}</p>
+								<hr>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p>Description:</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-10" id="desc">
+						<p>{{description}}</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row" align="right">
+					<div class="col-xs-12">
+						<p id="madeby{{id}}">Made by: {{name}}<p>
+						<script>
+							var email = readCookie("email");
+							if ("{{email}}" == email){
+								document.getElementById("madeby{{id}}").innerHTML = "Made by: You";
+							}
+						</script>
+					</div>
+				</div>
+				<div class="row" align="right">
+					<div class="col-xs-12">
+						<div id="apt-delete{{id}}" style="color: #A0522d;">
+							<span class="glyphicon glyphicon-remove-circle delete" aria-hidden="true"></span>
+							Cancel Appointment
+						</div>
+						<div id="drop{{id}}" style="color: #A0522d;">
+							<span class="glyphicon glyphicon-remove-circle drop" aria-hidden="true"></span>
+							Cancel Appointment
+						</div>
+						<script>
+							var length = 0;
+							{{#each owner}}
+								length++;
+								console.log(length);
+							{{/each}}
 				
-				<h5 id="madeby{{id}}">Made by: {{name}}<h5>
-				<script>
-				var email = readCookie("email");
-				if ("{{email}}" == email){
-					document.getElementById("madeby{{id}}").innerHTML = "Made by: You";
-				}
-				</script>
-				<br>
-				<div id="apt-delete{{id}}" style="color: #A0522d;" align="right">
-				<span class="glyphicon glyphicon-remove-circle delete" aria-hidden="true"></span>
-				Cancel Appointment</div>
-				<div id="drop{{id}}" style="color: #A0522d;" align="right">
-				<span class="glyphicon glyphicon-remove-circle drop" aria-hidden="true"></span>
-				Cancel Appointment</div>
-				<!--<button type="button" class="delete" id="apt-delete{{id}}">Cancel appointment</button>
-				//<button type="button" class="drop" id="drop{{id}}">Cancel appointment</button>-->
-				<script>
-				var length = 0;
-				{{#each owner}}
-					length++;
-					console.log(length);
-				{{/each}}
-				
-				if (length > 1){
-					$('#apt-delete{{id}}').hide();
-					$('#drop{{id}}').show();
+							if (length > 1){
+								$('#apt-delete{{id}}').hide();
+								$('#drop{{id}}').show();
 					
-				}
-				else {
-					$('#drop{{id}}').hide();
-					$('#apt-delete{{id}}').show();
+							}
+							else {
+								$('#drop{{id}}').hide();
+								$('#apt-delete{{id}}').show();
 					
-				}
-				</script>
+							}
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>	
 		{{/each}}
@@ -86,7 +121,51 @@
 		{{/if}}
 	</div>
 
-	<div id="popCancel" title="Confirm cancel">
+	<div id="canceloverlay">						
+		<div id="canceldiv">
+			<br>
+			<div class= "row">
+				<div class="col-xs-12">
+					<h4>Are you sure you wish to cancel this appointment</h4>
+				</div>
+			</div>
+			<br>
+         	<div class="row">
+         		<div class="col-xs-6" id="aptdate" align="right"></div>
+         		<div class="col-xs-6" id="apttime" align="left"></div>
+         	</div>
+         	<div class="row">
+         		<div class="col-xs-6">
+         			<button class="smallbtn" id="confirmCancel">Yes, cancel this appointment.</button>
+         		</div>
+         		<div class="col-xs-6">
+         			<button class="smallbtn" id="noCancel"><strong>No, don't cancel this appointment.</strong></button>
+    	</div>
+	</div>
+
+	<div id="dropoverlay">						
+		<div id="dropdiv">
+			<br>
+			<div class= "row">
+				<div class="col-xs-12">
+					<h4>Are you sure you wish to cancel this appointment</h4>
+				</div>
+			</div>
+			<br>
+         	<div class="row">
+         		<div class="col-xs-6" id="aptdate" align="right"></div>
+         		<div class="col-xs-6" id="apttime" align="left"></div>
+         	</div>
+         	<div class="row">
+         		<div class="col-xs-6">
+         			<button class="smallbtn" id="confirmDrop">Yes, cancel this appointment.</button>
+         		</div>
+         		<div class="col-xs-6">
+         			<button class="smallbtn" id="noDrop"><strong>No, don't cancel this appointment.</strong</button>
+    	</div>
+	</div>
+
+	<!--<div id="popCancel" title="Confirm cancel">
 		<p><font face="Georgia" size="4">Are you sure to cancel this appointment?</font></p>
 		<button id="confirmCancel">Yes, cancel my appointment.</button>
 		<button id="noCancel">No, thanks</button>
@@ -96,7 +175,7 @@
 		<p><font face="Georgia" size="4">Are you sure to cancel this appointment?</font></p>
 		<button id="confirmDrop">Yes, cancel my appointment.</button>
 		<button id="noDrop">No, thanks</button>
-	</div>
+	</div>-->
 	
 	<!--<script src="https://code.jquery.com/jquery.js"></script>-->
 	

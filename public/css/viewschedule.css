@@ -9,8 +9,13 @@ hr {
   border-color: #A0522d;
 }
 
-h3 {
+#pubappttitle {
   color: #A0522d;
+}
+
+p {
+  margin: 0 0 5px;
+  margin-top: 5px;
 }
 
 #header {
@@ -159,4 +164,27 @@ textarea {
   text-align: left;
   color: #fff5ee;
   margin-left:-10px;
+}
+
+#submitoverlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     padding-top:1em;
+}
+
+#submitoverlay #submitdiv {
+     width:300px;
+     margin: 90px auto;
+     background-color: #A0522D;
+     border:1px solid #000;
+     padding:15px;
+     padding-top:1px;
+     text-align:center;
+     color: #fff5ee;
 }

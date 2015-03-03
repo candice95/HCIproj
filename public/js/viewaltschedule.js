@@ -1,12 +1,19 @@
 $(document).ready(function() {
-	$( "#popMake" ).dialog({ autoOpen: false });
 	
+	var $scrollingDiv = $("#submitoverlay");
+ 
+	$(window).scroll(function(){			
+		$scrollingDiv
+			.stop()
+			.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );			
+	});
+
 	$( "#submit" ).click(function() {
 		var date = $("#date option:selected").text();
 		var time = $("#time option:selected").text();
 		document.getElementById("aptdate").innerHTML = date;
 		document.getElementById("apttime").innerHTML = time;
-		$( "#popMake" ).dialog( "open" );
+		$('#submitoverlay').css('visibility','visible').hide().fadeIn('slow');
 
 		var name = $('#inputname #name').val();
 		var email = readCookie("email");
@@ -26,11 +33,11 @@ $(document).ready(function() {
 			'origowner': 'thisuser'
 		};
 
-		$(".ui-button-icon-primary.ui-icon.ui-icon-closethick").click(function(){
-			$.post('/viewschedule/new', json, function(){
+		setTimeout(function() {
+        	$.post('/viewschedule/new', json, function(){
 				window.location.href = '/viewschedule';
 			});
-		});
+    	}, 3000);
 	});
 });
 

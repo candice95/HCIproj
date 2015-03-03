@@ -3,15 +3,27 @@
 $(document).ready(function() {
 	remCookie();
 
-	$('#popCancel').dialog({ autoOpen: false });
-	$('#popDrop').dialog({ autoOpen: false });
+	var $scrollingDiv = $("#dropoverlay");
+ 
+	$(window).scroll(function(){			
+		$scrollingDiv
+			.stop()
+			.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );			
+	});
+	
+	var $scrollingDiv = $("#canceloverlay");
+ 
+	$(window).scroll(function(){			
+		$scrollingDiv
+			.stop()
+			.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );			
+	});
 
  	$('.information .delete').click(function(e) {
 		var infoID = $(this).closest('.information').attr('id');
 		var idNumber = infoID.substr('information'.length);
 
-		$( "#popCancel" ).dialog( "open" );
-		
+		$('#canceloverlay').css('visibility','visible').hide().fadeIn('slow');
 		$('#confirmCancel').click(function() {
 			$.post('/stu_homepage/'+idNumber+'/delete', function() {
 			window.location.href = '/stu_homepage';
@@ -27,8 +39,8 @@ $(document).ready(function() {
 		var infoID = $(this).closest('.information').attr('id');
 		var idNumber = infoID.substr('information'.length);
 
-		$( "#popDrop" ).dialog( "open" );
-		
+		$('#dropoverlay').css('visibility','visible').hide().fadeIn('slow');
+
 		$('#confirmDrop').click(function() {
 			$.post('/stu_homepage/'+idNumber+'/drop', function() {
 			window.location.href = '/stu_homepage';
