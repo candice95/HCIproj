@@ -41,6 +41,7 @@ $(document).ready(function() {
 	});
 });
 
+
 function remCookie() {
 	var email = readCookie("email");
 	$('#email').text(email);
