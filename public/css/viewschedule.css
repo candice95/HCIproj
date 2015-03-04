@@ -1,16 +1,16 @@
 body {
-    background-color: #FFF5EE;
+    background-color: #ffffff;
 
 }
 
 hr {
   margin-bottom: 0px;
   margin-top: 0px;
-  border-color: #A0522d;
+  border-color: #144567;
 }
 
 #pubappttitle {
-  color: #A0522d;
+  color: #144567;
 }
 
 p {
@@ -19,13 +19,14 @@ p {
 }
 
 #header {
-  border: 3px ridge #A0522d;
+  border: 3px ridge #144567;
   box-shadow: 5px 5px 2px #888888;
   width: 100%;
   height: 120px;
   position: fixed;
   z-index: 10;
-  background: inherit;
+  background: #144567;
+ border-radius: 10px;
 }
 
 #public-appt{
@@ -51,19 +52,20 @@ p {
   color: #fff5ee;
   font-size: 13px;
   font-color: #FFF5EE;
-  background: #A0522D;
+  background: #144567;
   padding: 7px 20px 7px 20px;
   text-decoration: none;
-  border: solid #A0522D 2px;
+  border: solid #144567 2px;
   position: relative;
 }
 
 #appt {
   border-radius: 10px;
-  background: #FAEBD7;
-  border-color: #A0522D;
+  background: #7ab5dc;
+  border-color: #7ab5dc;
   padding: 10px;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 #desc {
@@ -75,14 +77,14 @@ p {
 }
 
 .btn {
-  background: #FFF5EE;
+  background: #7ab5dc;
   border-radius: 33px;
   border:none;
-  border: solid #A0522D 2px;
+  border: solid #7ab5dc 2px;
   font-family: Arial;
   font-size: 15px;
   padding: 10px 15px 10px 15px;
-  color: #A0522D;
+  color: #ffffff;
 }
 
 #joined {
@@ -92,12 +94,14 @@ p {
 #dropdowndiv {
   margin-top: 1.2em;
   display: none;
-  background: #FFF5EE;
-  border: 3px ridge #A0522d;
+  background: #ffffff;
+
+  border: 3px ridge #144567;
   border-top-style: none;
   box-shadow: 5px 5px 2px #888888;
-  color: #A0522d;
+  color: #7ab5dc;
   z-index: 5;
+
 }
 
 #calinfo{
@@ -123,7 +127,7 @@ textarea {
 }
 
 #logoutlabel{
-  color: #A0522d;
+  color: #ffffff;
 }
 
 #logoutdiv{
@@ -134,7 +138,7 @@ textarea {
 
 .logouticon {
   font-size: 2em;
-  color: #A0522d;
+  color: #ffffff;
 }
 
 #overlay {
@@ -152,12 +156,12 @@ textarea {
 #overlay #infodiv {
      width:300px;
      margin: 90px auto;
-     background-color: #A0522D;
+     background-color: #144567;
      border:1px solid #000;
      padding:15px;
      padding-top:1px;
      text-align:center;
-     color: #fff5ee;
+     color: #ffffff;
 }
 
 #closediv{
@@ -168,6 +172,7 @@ textarea {
 
 #submitoverlay {
      visibility: hidden;
+
      position: absolute;
      left: 0px;
      top: 0px;
@@ -176,15 +181,17 @@ textarea {
      text-align:center;
      z-index: 1000;
      padding-top:1em;
+
 }
 
 #submitoverlay #submitdiv {
+    
      width:300px;
      margin: 90px auto;
-     background-color: #A0522D;
+     background-color: #144567;
      border:1px solid #000;
      padding:15px;
      padding-top:1px;
      text-align:center;
-     color: #fff5ee;
+     color: #ffffff;
 }
