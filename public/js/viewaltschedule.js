@@ -90,6 +90,7 @@ $('#formbtn').click(function(){
 function overlay() {
 	el = document.getElementById("overlay");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	
 	//add your Woopra tracking code for version A's like button click event
     woopra.track("b_version_info_click");
 };
