@@ -2,25 +2,46 @@
 	background-color: #ffffff;
 	font-family: Arial;
 	color: #144567;
-    max-width: 100%; 
-    max-height: 100%; 
-    overflow-x: hidden; 
+  max-width: 100%; 
+  max-height: 100%; 
+  overflow-x: hidden; 
 }
 
+hr {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-color: #144567;
+}
 
+p {
+  margin: 0 0 5px;
+  margin-top: 5px;
+}
 
-.btn{
-	 
- 	border:none; 
- 	color: #A0522D; 
- 	background: #FFF5EE; 
- 	border-radius: 33px; 
- 	border:none; 
- 	border: solid #A0522D 2px; 
- 	font-family: Arial; 
- 	font-size: 20px;
- 	padding: 10px 20px 10px 20px;
+h2 {
+  color: #144567;
+}
 
+h3 {
+  color: #ffffff;
+}
+
+#desc {
+  margin-left:2em
+}
+
+#header {
+  box-shadow: 5px 5px 2px #888888;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 10;
+  background: #144567;
+  color: #fff;
+}
+
+#greet{
+  color: #fff;
 }
 
 #appt {
@@ -32,16 +53,6 @@
   margin-bottom: 15px;
 }
 
-a:link{
-	text-decoration: none;
-	color:#A0522D; 
-	}
-
-a:visited{
-	text-decoration: none;
-	color::#A0522D;
-}
-
 #navbuttons {
   margin: 0.2em;
   margin-left: 15px;
@@ -49,6 +60,21 @@ a:visited{
 
 #logoutdiv {
   padding-left: 0px;
+}
+
+#upapt {
+  padding-top: 70px;
+}
+
+#logoutdiv{
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+.logouticon {
+  font-size: 2em;
+  color: #ffffff;
 }
 
 

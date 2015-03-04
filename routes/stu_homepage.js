@@ -8,7 +8,7 @@ exports.view = function(req, res){
 
 	models.Appointment
 		.find({"owner": email})
-		.sort('-date')
+		.sort('date')
 		.exec(renderAppointments);
 
 	function renderAppointments(err, allapt) {
