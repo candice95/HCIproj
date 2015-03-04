@@ -28,11 +28,9 @@
 				</div>
 			</div>
 			<div class="row" id="viewrow">
-				<div class="col-xs-2"></div>
-				<div class="col-xs-8" align="center">
+				<div class="col-xs-12" align="center">
 					<button class="btn" id="formbtn">Create A New Appointment</button>
 				</div>
-				<div class="col-xs-2"></div>
 			</div>
 		</div>
 	
@@ -85,8 +83,13 @@
          					<p>Private appointments are only visible to the professor. No other user will see it or be able to join it. You can not see or join other private appointments either.</p>
     					 </div>
 					</div>
-						<div class="col-xs-6">Appointment Type:</div>
-						<div class="col-xs-6" align="right"><span class="glyphicon glyphicon-question-sign" onclick="overlay()" aria-hidden="true"></span><a href="#" onclick="overlay()"> What's this?</a><br></div>
+						<div class="row">
+							<div class="col-xs-6">Appointment Type:</div>
+							<div class="col-xs-6" align="right">
+								<span class="glyphicon glyphicon-question-sign" onclick="overlay()" aria-hidden="true"></span><a href="#" onclick="overlay()"> What's this?</a><br>
+							</div>
+						</div>
+
 					<div id="radiobtns">
 						<input type="radio" name="type" value="Public" checked>Public (allow other students to join your appointment)<br>
 						<input type="radio" name="type" value="Private">Private (have a one on one appointment)
@@ -99,7 +102,7 @@
 	</div>
 	
 	<div class ="container" id="public-appt">
-	<h3 align="center">Public Appointments</h3>
+	<h3 id="pubappttitle" align="center">Public Appointments</h3>
 	{{#each allapt}}
 	<div class="container-fluid" id="appt">
 		<div class="row">
@@ -136,8 +139,8 @@
       						{{/each}}
 							if (contained){
 								document.getElementById("joinbtn{{id}}").disabled = true;
-								document.getElementById("joinbtn{{id}}").style.backgroundColor = "#D0A896";
-								document.getElementById("joinbtn{{id}}").style.borderColor = "#D0A896";
+								document.getElementById("joinbtn{{id}}").style.backgroundColor = "#6889a1";
+								document.getElementById("joinbtn{{id}}").style.borderColor = "#6889a1";
 								document.getElementById("joinbtn{{id}}").style.padding = "7px 13px 7px 13px";
 								document.getElementById("joinbtn{{id}}").innerHTML = "Joined";
 							}

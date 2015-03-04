@@ -1,38 +1,34 @@
 body {
-    background-color: #FFF5EE;
+    background-color: #ffffff;
 }
 
 a:link, a:visited, a:active, a:hover{
   text-decoration: none;
-  color: #A0522d;
+  color: #144567;
 }
 
 hr {
   margin-bottom: 0px;
   margin-top: 0px;
-  border-color: #A0522d; 
+  border-color: #144567; 
 }
 
-h3 {
-  color: #A0522d;
+#pubappttitle {
+  color: #144567;
 }
 
 #header {
-  border: 3px ridge #A0522d;
   box-shadow: 5px 5px 2px #888888;
   width: 100%;
   height: 120px;
   position: fixed;
   z-index: 10;
   background: inherit;
+  background: #144567;
 }
 
 #public-appt{
   padding-top: 110px;
-}
-
-#calendar{
-	background-color: #FFF5EE;
 }
 
 .fc-left h2{
@@ -50,19 +46,20 @@ h3 {
   color: #fff5ee;
   font-size: 13px;
   font-color: #FFF5EE;
-  background: #A0522D;
+  background: #144567;
   padding: 7px 20px 7px 20px;
   text-decoration: none;
-  border: solid #A0522D 2px;
+  border: solid #144567 2px;
   position: relative;
 }
 
 #appt {
   border-radius: 10px;
-  background: #FAEBD7;
-  border-color: #A0522D;
+  background: #7ab5dc;
+  border-color: #7ab5dc;
   padding: 10px;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 #desc {
@@ -74,14 +71,15 @@ h3 {
 }
 
 .btn {
-  background: #FFF5EE;
+  background: #7ab5dc;
   border-radius: 33px;
   border:none;
-  border: solid #A0522D 2px;
+  border: solid #7ab5dc 2px;
   font-family: Arial;
   font-size: 15px;
   padding: 10px 15px 10px 15px;
-  color: #A0522D;
+  color: #ffffff;
+  margin-top: 5px;
 }
 
 #joined {
@@ -91,17 +89,13 @@ h3 {
 #dropdowndiv {
   margin-top: 1.2em;
   display: none;
-  background: #FFF5EE;
-  border: 3px ridge #A0522d;
+  background: #ffffff;
+  border: 3px ridge #144567;
   border-top-style: none;
   box-shadow: 5px 5px 2px #888888;
-  color: #A0522d;
+  color: #144567;
   z-index: 5;
-}
-
-#calinfo{
-  background: #FFF5EE;
-  padding-bottom: 10px;
+  overflow-y: scroll;
 }
 
 .fc-title {
@@ -122,7 +116,7 @@ textarea {
 }
 
 #logoutlabel{
-  color: #A0522d;
+  color: #ffffff;
 }
 
 #logoutdiv{
@@ -133,7 +127,7 @@ textarea {
 
 .logouticon {
   font-size: 2em;
-  color: #A0522d;
+  color: #ffffff;
 }
 
 #overlay {
@@ -151,12 +145,12 @@ textarea {
 #overlay #infodiv {
      width:300px;
      margin: 90px auto;
-     background-color: #A0522D;
+     background-color: #144567;
      border:1px solid #000;
      padding:15px;
      padding-top:1px;
      text-align:center;
-     color: #fff5ee;
+     color: #ffffff;
 }
 
 #closediv{
@@ -180,10 +174,10 @@ textarea {
 #submitoverlay #submitdiv {
      width:300px;
      margin: 90px auto;
-     background-color: #A0522D;
+     background-color: #144567;
      border:1px solid #000;
      padding:15px;
      padding-top:1px;
      text-align:center;
-     color: #fff5ee;
+     color: #ffffff;
 }

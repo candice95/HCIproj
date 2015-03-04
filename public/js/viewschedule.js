@@ -1,11 +1,14 @@
+var scrollon = false;
+
 $(document).ready(function() {
-	
 	var $scrollingDiv = $("#submitoverlay");
  
 	$(window).scroll(function(){			
-		$scrollingDiv
-			.stop()
-			.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );			
+		if (scrollon){
+			$scrollingDiv
+				.stop()			
+				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
+		}		
 	});
 
 	$( "#submit" ).click(function() {
@@ -13,6 +16,13 @@ $(document).ready(function() {
 		var time = $("#time option:selected").text();
 		document.getElementById("aptdate").innerHTML = date;
 		document.getElementById("apttime").innerHTML = time;
+
+		scrollon = true;
+		var $scrollingDiv = $("#submitoverlay");
+		$scrollingDiv
+				.stop()			
+				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );
+				
 		$('#submitoverlay').css('visibility','visible').hide().fadeIn('slow');
 
 		var name = $('#inputname #name').val();

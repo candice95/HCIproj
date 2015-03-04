@@ -1,5 +1,22 @@
 'use strict';
 
+var scrollon;
+
+$(document).ready(function() {
+    
+    
+    var $scrollingDiv = $("#overlay");
+    var test = document.getElementById("overlay");
+ 
+    $(window).scroll(function(){            
+        if (test.style.visibility == "visible"){
+            $scrollingDiv
+                .stop()         
+                .animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );  
+        }       
+    });
+});
+
 var newLocation;
 
 $(document).keypress(
@@ -14,6 +31,8 @@ $('#student').click(function(){
     var	current = $('.buttons'),
         next = $('.fields');
 
+    $('#signupcontainer').fadeOut();
+
     current.animate({marginLeft: '-200%'}, 800);
     $('#inputs').show();
     $('#back').show();
@@ -27,6 +46,8 @@ $('#prof').click(function(){
     var current = $('.buttons'),
         next = $('.fields');
 
+    $('#signupcontainer').fadeOut();
+
     current.animate({marginLeft: '-200%'}, 800);
     $('#inputs').show();
     $('#back').show();
@@ -38,6 +59,8 @@ $('#prof').click(function(){
 $("#back").click(function(){
     var current = $('.fields'),
         next = $('.buttons');
+
+    $('#signupcontainer').fadeIn();
 
     current.animate({marginLeft: '100%'}, 800);
     $('#student').show();
@@ -119,4 +142,9 @@ function addLoadEvent(func) {
 addLoadEvent(function() {
     remCookie();
 });
+
+function overlay() {
+    var el = document.getElementById("overlay");
+    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+};
 

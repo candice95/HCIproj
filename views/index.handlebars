@@ -5,18 +5,21 @@
 	<title>Buddy System</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
+	<div class="container" id="titleimage">
 		<img src="images/buddysystem.png" class="bsimg" style="background-image:url(images/p-s.png)">
 	</div>
-	<div class="slidespace">
-		<div class="buttons" id ="buttons">
-			<button id="student" class="btn">Students</button>
-			<br><br>
-			<button id="prof" class="btn">Professors</button>
-		</div>
+
+	<div class="slidespace container">
+			<div class="buttons" id ="buttons">
+				<button id="student" class="btn">Students</button>	
+				<br><br>
+				<button id="prof" class="btn">Professors</button>
+			</div>
 
 		<div class="fields" id="signin">
 			<img src="images/arrow-left.png" id="back">
@@ -31,6 +34,26 @@
 				<input id="proflogin" class="loginbtn" type="submit" value="Log in" formaction="/professorhome">
 			</form>
 		</div>
+	</div>
+
+	<div class="container-fluid" id="signupcontainer">
+		<div class="row">
+			<div class="col-xs-12">
+				<button id="signup" class="smallbtn" onclick="overlay()">Sign Up</button>
+			</div>
+		</div>
+
+
+		<div id="overlay">
+
+		<div id="infodiv">
+			<div id="closediv">
+				<span class="glyphicon glyphicon-remove" onclick="overlay()" aria-hidden="true"></span>
+			</div>
+         	<p>Due to time constraints, there is only a rudimentary login system set up for this website. Your username is saved through cookies, but the password is NOT. You can login with any e-mail - with any type of (gibberish) password.</p>
+         	<p>To access the appointments that you join/create, you will have to log in with the same e-mail each and every time (as stated, the password doesn't matter).</p>
+    	</div>
+	</div>	
 	</div>
 
 		
