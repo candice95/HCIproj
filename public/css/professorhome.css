@@ -1,11 +1,13 @@
 .body{
-	background-color: #FFF5EE;
+	background-color: #ffffff;
 	font-family: Arial;
-	
+	color: #144567;
     max-width: 100%; 
     max-height: 100%; 
     overflow-x: hidden; 
 }
+
+
 
 .btn{
 	 
@@ -23,9 +25,10 @@
 
 #appt {
   border-radius: 10px;
-  background: #FAEBD7;
-  border-color: #A0522D;
+  background: #7ab5dc;
+  border-color: #7ab5dc;
   padding: 10px;
+  color:#ffffff;
   margin-bottom: 15px;
 }
 
@@ -47,3 +50,5 @@ a:visited{
 #logoutdiv {
   padding-left: 0px;
 }
+
+

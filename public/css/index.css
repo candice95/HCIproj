@@ -1,8 +1,9 @@
 body {
-    background-color: #FFF5EE;
+    background-color: #ffffff;
     max-width: 100%;
-    max-height: 100%
+    max-height: 100%;
     overflow-x: hidden;
+    color: #144567;
 }
 
 #buttons{
@@ -16,43 +17,44 @@ body {
 }
 
 #student {
-	background: #FFF5EE;
+	background: #7ab5dc;
 	border-radius: 33px;
 	border:none;
-	border: solid #A0522D 2px;
+	border: solid #144567 2px;
 	font-family: Arial;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
-	color: #A0522D;
+	color: #ffffff;
 	position: relative;
 	left: 70%;
 }
 
 #prof {
-	background: #FFF5EE;
+	background: #7ab5dc;
 	border-radius: 33px;
 	border:none;
-	border: solid #A0522D 2px;
+	border: solid #144567 2px;
 	font-family: Arial;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
-	color: #A0522D;
+	color: #ffffff;
 	position: relative;
 	left: 70%;
 }
 
 #back {
 	display: none;
+
 }
 
 .loginbtn {
-	background: #FFF5EE;
+	background: #7ab5dc;
 	border-radius: 33px;
 	border:none;
-	border: solid #A0522D 2px;
+	border: solid #144567 2px;
 	font-family: Arial;
 	padding: 10px 20px 10px 20px;
-	color: #A0522D;
+	color: #ffffff;
 	display: none;
 	position: relative;
 	left:35%;
@@ -62,23 +64,29 @@ body {
 	height: 100px;
 	background-color: 'seashell';
 	display: none;
+
 }
 
 label{
+    
     display: inline-block;
     float: left;
     clear: left;
     width: 100px;
     text-align: right;
+
+
 }
 
 input {
   display: inline-block;
   float: left;
+ 
 }
 
 form {
-	color: #A0522D;
+	color: #144567;
+	
 }
 
 .bsimg {

@@ -49,8 +49,8 @@ $('.joinbutton').click(function(){
 
 	//$('#'+ infoID).animate({ opacity: 0 });
 	$('#joinbtn' + idNumber).css({
-		"background-color": "#D0A896",
-		"border-color": "#D0A896",
+		"background-color": "#6889a1",
+		"border-color": "#6889a1",
 		"padding": "7px 13px 7px 13px"
 	});
 
