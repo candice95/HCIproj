@@ -12,6 +12,10 @@ hr {
   color: #144567;
 }
 
+#scroll {
+  padding-bottom: 3em;
+}
+
 p {
   margin: 0 0 5px;
   margin-top: 5px;
@@ -90,7 +94,7 @@ p {
   box-shadow: 5px 5px 2px #888888;
   color: #144567;
   z-index: 5;
-  overflow-y:auto;
+  overflow-y: scroll;
 }
 
 #navbuttons {

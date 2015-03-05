@@ -27,7 +27,11 @@ $(document).keypress(
 });
 
 $('#student').click(function(){
-    $('#proflogin').hide();
+    $('#proflogin').hide();    
+    $('.buttons').hide('slide', {direction: 'left'});
+    $('#signin').show('slide', {direction: 'right'});
+    $('#stulogin').fadeIn(800);
+    /*$('#proflogin').hide();
     var	current = $('.buttons'),
         next = $('.fields');
 
@@ -38,11 +42,15 @@ $('#student').click(function(){
     $('#back').show();
     $('#stulogin').show();
     next.show().animate({marginLeft:'10%'}, 800);
-    current.fadeOut(function(){});
+    current.fadeOut(function(){});*/
 });
 
 $('#prof').click(function(){
     $('#stulogin').hide();
+    $('#buttons').hide('slide', {direction: 'left'});
+    $('#signin').show('slide', {direction: 'right'});
+    $('#proflogin').fadeIn(800);
+    /*$('#stulogin').hide();
     var current = $('.buttons'),
         next = $('.fields');
 
@@ -53,11 +61,13 @@ $('#prof').click(function(){
     $('#back').show();
     $('#proflogin').show();
     next.show().animate({marginLeft:'10%'}, 800);
-    current.fadeOut(function(){});
+    current.fadeOut(function(){});*/
 });
 
 $("#back").click(function(){
-    var current = $('.fields'),
+    $('#signin').hide('slide', {direction: 'right'});
+    $('#buttons').show('slide', {direction: 'left'});
+    /*var current = $('.fields'),
         next = $('.buttons');
 
     $('#signupcontainer').fadeIn();
@@ -69,7 +79,7 @@ $("#back").click(function(){
     next.show().animate({marginLeft: '0%'}, 800);
     
     $('#inputs').find('input:text').val('');
-    $('#inputs').find('input:password').val('');
+    $('#inputs').find('input:password').val('');*/
 });
 
 function newCookie(name,value,days) {

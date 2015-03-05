@@ -37,69 +37,71 @@
 		</div>
 	
 		<div class="container" id="dropdowndiv">
-			<h4 align="center"><strong>Create A New Appointment</strong></h4>
-			<form id="inputname" role="form">
-				<div class="row">
-					<div class="col-xs-1"></div>
-					<div class="col-xs-4">
-						<select class="date" id="date">
-							<option selected disabled>Select a Date</option>
-							<option value="w6">Thu 2/12/2015</option>
-							<option value="w7">Thu 2/19/2015</option>
-							<option value="w8">Thu 2/26/2015</option>
-							<option value="w9">Thu 3/5/2015</option>
-							<option value="w10">Thu 3/12/2015</option>
-							<option value="w11">Thu 3/19/2015</option>
-						</select>				
-					</div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-4">
-						<select class="time" id="time">
-							<option selected disabled>Select a Time</option>
-							<option value="1">2:00-2:15pm</option>
-							<option value="2">2:15-2:30pm</option>
-							<option value="3">2:30-2:45pm</option>
-							<option value="4">2:45-3:00pm</option>
-						</select>
-					</div>
-				</div>
-				<br>
-				<div class="name">
-					Name: 
-					<input type="text" id="name" placeholder="Full Name" name="name">
-				</div>
-				<br>
-				<div class="description">
-					Description:
-					<textarea maxlength="200" rows="3" cols="40" id="description" placeholder="What is the purpose of your appointment?"></textarea>
-				</div>
-				<br>
-
-				<form action="" id="typeSelect">
-					<div id="overlay">						
-						<div id="infodiv">
-							<div id="closediv">
-								<span class="glyphicon glyphicon-remove version_b" onclick="overlay()" aria-hidden="true"></span>
-							</div>
-         					<p>Public appointments are visible to all other users. By selecting this, any user can join to come along with you to see the professor. You can join other public appointments too!</p>
-         					<p>Private appointments are only visible to the professor. No other user will see it or be able to join it. You can not see or join other private appointments either.</p>
-    					 </div>
-					</div>
-						<div class="row">
-							<div class="col-xs-6">Appointment Type:</div>
-							<div class="col-xs-6" align="right">
-								<span class="glyphicon glyphicon-question-sign" onclick="overlay()" aria-hidden="true"></span><a href="#" onclick="overlay()"> What's this?</a><br>
-							</div>
+			<div id="scroll">
+				<h4 align="center"><strong>Create A New Appointment</strong></h4>
+				<form id="inputname" role="form">
+					<div class="row">
+						<div class="col-xs-1"></div>
+						<div class="col-xs-4">
+							<select class="date" id="date">
+								<option selected disabled>Select a Date</option>
+								<option value="w6">Thu 2/12/2015</option>
+								<option value="w7">Thu 2/19/2015</option>
+								<option value="w8">Thu 2/26/2015</option>
+								<option value="w9">Thu 3/5/2015</option>
+								<option value="w10">Thu 3/12/2015</option>
+								<option value="w11">Thu 3/19/2015</option>
+							</select>				
 						</div>
-
-					<div id="radiobtns">
-						<input type="radio" name="type" value="Public" checked>Public (allow other students to join your appointment)<br>
-						<input type="radio" name="type" value="Private">Private (have a one on one appointment)
+						<div class="col-xs-1"></div>
+						<div class="col-xs-4">
+							<select class="time" id="time">
+								<option selected disabled>Select a Time</option>
+								<option value="1">2:00-2:15pm</option>
+								<option value="2">2:15-2:30pm</option>
+								<option value="3">2:30-2:45pm</option>
+								<option value="4">2:45-3:00pm</option>
+							</select>
+						</div>
 					</div>
+					<br>
+					<div class="name">
+						Name: 
+						<input type="text" id="name" placeholder="Full Name" name="name">
+					</div>
+					<br>
+					<div class="description">
+						Description:
+						<textarea maxlength="200" rows="3" cols="40" id="description" placeholder="What is the purpose of your appointment?"></textarea>
+					</div>
+					<br>
+
+					<form action="" id="typeSelect">
+						<div id="overlay">						
+							<div id="infodiv">
+								<div id="closediv">
+									<span class="glyphicon glyphicon-remove version_b" onclick="overlay()" aria-hidden="true"></span>
+								</div>
+	         					<p>Public appointments are visible to all other users. By selecting this, any user can join to come along with you to see the professor. You can join other public appointments too!</p>
+	         					<p>Private appointments are only visible to the professor. No other user will see it or be able to join it. You can not see or join other private appointments either.</p>
+	    					 </div>
+						</div>
+							<div class="row">
+								<div class="col-xs-6">Appointment Type:</div>
+								<div class="col-xs-6" align="right">
+									<span class="glyphicon glyphicon-question-sign" onclick="overlay()" aria-hidden="true"></span><a href="#" onclick="overlay()"> What's this?</a><br>
+								</div>
+							</div>
+
+						<div id="radiobtns">
+							<input type="radio" name="type" value="Public" checked>Public (allow other students to join your appointment)<br>
+							<input type="radio" name="type" value="Private">Private (have a one on one appointment)
+						</div>
+					</form>
+					<br>
+					<center><input type="submit" value="Submit" class="smallbtn" id="submit"></center><br>
 				</form>
-				<br>
-				<center><input type="submit" value="Submit" class="smallbtn" id="submit"></center><br>
-			</form>
+			</div>
 		</div>
 	</div>
 	
