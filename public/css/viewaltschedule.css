@@ -4,13 +4,17 @@ body {
 
 a:link, a:visited, a:active, a:hover{
   text-decoration: none;
-  color: #144567;
+  color: #E68916;
 }
 
 hr {
   margin-bottom: 0px;
   margin-top: 0px;
   border-color: #144567; 
+}
+
+.glyphicon-question-sign {
+  color: #E68916;
 }
 
 #pubappttitle {

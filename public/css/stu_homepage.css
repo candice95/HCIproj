@@ -70,13 +70,25 @@ h3 {
 }
 
 .delete {
-  color: red;
+  color: #144567;
   font-size: 1.5em;
 }
 
 .drop {
-  color: red;
+  color: #144567;
   font-size: 1.5em;
+}
+
+#deletestyle{
+  color: #144567;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+#dropstyle{
+  color: #144567;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 #logoutlabel{

@@ -7,16 +7,20 @@ body {
 }
 
 #buttons{
-	position: absolute;
-  padding-left: 7.3em;
+	/*position: absolute;
+  padding-left: 7.3em;*/
   text-align: center;
+}
+
+#fieldsdiv {
+  position: absolute;
+  padding-left: 0em;
 }
 
 #signin {
 	/*margin-left: 100%;*/
-	position: absolute;
+	/*position: absolute;*/
   display: none;
-  text-align: center;
 }
 
 #student {
@@ -74,12 +78,9 @@ body {
 label{
     
     display: inline-block;
-    float: left;
     clear: left;
     width: 8em;
     text-align: right;
-
-
 }
 
 input {
@@ -124,9 +125,13 @@ form {
 }
 
 #signupcontainer {
-	margin-top: 15em;
+	/*margin-top: 15em;
 	margin-left:14em;
-  margin-bottom:3em;
+  margin-bottom:3em;*/
+  text-align: center;
+  padding-top: 5em;
+  padding-left: 10em;
+  padding-bottom: 3em;
 }
 
 #overlay {

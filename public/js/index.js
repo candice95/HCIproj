@@ -31,11 +31,13 @@ $('#student').click(function(){
     $('.buttons').hide('slide', {direction: 'left'});
     $('#signin').show('slide', {direction: 'right'});
     $('#stulogin').fadeIn(800);
+    $('#signupcontainer').fadeOut();
+
     /*$('#proflogin').hide();
     var	current = $('.buttons'),
         next = $('.fields');
 
-    $('#signupcontainer').fadeOut();
+    
 
     current.animate({marginLeft: '-200%'}, 800);
     $('#inputs').show();
@@ -50,11 +52,11 @@ $('#prof').click(function(){
     $('#buttons').hide('slide', {direction: 'left'});
     $('#signin').show('slide', {direction: 'right'});
     $('#proflogin').fadeIn(800);
+    $('#signupcontainer').fadeOut();
+
     /*$('#stulogin').hide();
     var current = $('.buttons'),
         next = $('.fields');
-
-    $('#signupcontainer').fadeOut();
 
     current.animate({marginLeft: '-200%'}, 800);
     $('#inputs').show();
@@ -67,10 +69,12 @@ $('#prof').click(function(){
 $("#back").click(function(){
     $('#signin').hide('slide', {direction: 'right'});
     $('#buttons').show('slide', {direction: 'left'});
+    $('#signupcontainer').fadeIn();
+    
     /*var current = $('.fields'),
         next = $('.buttons');
 
-    $('#signupcontainer').fadeIn();
+    
 
     current.animate({marginLeft: '100%'}, 800);
     $('#student').show();
