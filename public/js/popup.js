@@ -10,6 +10,3 @@ function homeFunc(){
 	window.location.href='/viewschedule';
 }
 
-function logoutFunc(){
-	window.location.href='/';
-}

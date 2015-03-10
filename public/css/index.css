@@ -26,7 +26,6 @@ body {
 #student {
 	background: #7ab5dc;
 	border-radius: 2.0625em;
-	border:none;
 	border: solid #144567 0.125em;
 	font-family: Arial;
 	font-size: 1.25em;
@@ -40,7 +39,6 @@ body {
 #prof {
 	background: #7ab5dc;
 	border-radius: 2.0625em;
-	border:none;
 	border: solid #144567 0.125em;
 	font-family: Arial;
 	font-size: 1.25em;
@@ -60,7 +58,6 @@ body {
 .loginbtn {
 	background: #7ab5dc;
 	border-radius: 2.0625em;
-	border:none;
 	border: solid #144567 0.125em;
 	font-family: Arial;
 	padding: 0.625em 1.25em 0.625em 1.25em;

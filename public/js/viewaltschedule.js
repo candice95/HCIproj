@@ -86,8 +86,8 @@ $(document).ready(function() {
 			};
 
 			setTimeout(function() {
-        		$.post('/viewschedule/new', json, function(){
-					window.location.href = '/viewschedule';
+        		$.post('/viewaltschedule/new', json, function(){
+					window.location.href = '/viewaltschedule';
 				});
     		}, 3000);
 		}
