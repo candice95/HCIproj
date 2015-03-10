@@ -3,7 +3,7 @@ var scrollon = false;
 $(document).ready(function() {
 	
 	var $scrollingDiv = $("#submitoverlay");
-	var $errScroll = $("#submiterror");
+	//var $errScroll = $("#submiterror");
 
 	$(window).scroll(function(){		
 		if (scrollon){	
@@ -11,11 +11,11 @@ $(document).ready(function() {
 				.stop()
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
 		}		
-		if (scrollon){	
+		/*if (scrollon){	
 			$errScroll
 				.stop()
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
-		}	
+		}*/	
 	});
 
 	$( "#submit" ).click(function() {
@@ -47,13 +47,13 @@ $(document).ready(function() {
 			}
 
 
-			scrollon = true;
+			/*scrollon = true;
 			var $errScroll = $("#submiterror");
 			$errScroll
 				.stop()			
-				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );
+				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );*/
 			$('#submiterror').css('visibility','visible').hide().fadeIn();
-		
+			
 			return;
 		}
 		else{
