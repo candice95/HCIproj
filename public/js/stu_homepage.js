@@ -7,22 +7,18 @@ $(document).ready(function() {
 	remCookie();
 
 	var $scrollingDiv = $("#dropoverlay");
+	var $cancelScroll = $("#canceloverlay");
  
 	$(window).scroll(function(){	
 		if (scrollon){		
 			$scrollingDiv
 				.stop()
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
-		}		
-	});
-
-	var $scrollingDiv = $("#canceloverlay");
- 
-	$(window).scroll(function(){
-		if (scrollon){			
-			$scrollingDiv
+		}
+		if (scrollon){		
+			$cancelScroll
 				.stop()
-				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );		
+				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
 		}	
 	});
 
@@ -32,8 +28,8 @@ $(document).ready(function() {
 
 		scrollon = true;
 
-		var $scrollingDiv = $("#canceloverlay");
-		$scrollingDiv
+		var $cancelScroll = $("#canceloverlay");
+		$cancelScroll
 				.stop()
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );
 
@@ -57,7 +53,7 @@ $(document).ready(function() {
 
 		scrollon = true;
 
-		var $scrollingDiv = $("#canceloverlay");
+		var $scrollingDiv = $("#dropoverlay");
 		$scrollingDiv
 				.stop()
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );

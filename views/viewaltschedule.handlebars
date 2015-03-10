@@ -8,12 +8,13 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="js/stuFunc.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/viewaltschedule.css">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
-  {{> tracking_code_script}}
+
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 			<div class="row">
 				<div class="col-xs-2" align="center"></div>
 				<div class="col-xs-8" align="center">				
-					<button class="btn" id="viewbtn" onclick="backshFunc()">View My Appointments</button>
+					<button class="largebtn" id="viewbtn" onclick="backshFunc()">View My Appointments</button>
 				</div>
 				<div class="col-xs-2" id="logoutdiv">
 					<span class="glyphicon glyphicon-off logouticon" aria-hidden="true" onclick="logoutFunc()"></span>
@@ -31,7 +32,7 @@
 			</div>
 			<div class="row" id="viewrow">
 				<div class="col-xs-12" align="center">
-					<button class="btn" id="formbtn">Create A New Appointment</button>
+					<button class="largebtn" id="formbtn">Create A New Appointment</button>
 				</div>
 			</div>
 		</div>
@@ -43,7 +44,7 @@
 					<div class="row">
 						<div class="col-xs-1"></div>
 						<div class="col-xs-4">
-							<select class="date" id="date">
+							<select class="date" id="date" required>
 								<option selected disabled>Select a Date</option>
 								<option value="w6">Thu 2/12/2015</option>
 								<option value="w7">Thu 2/19/2015</option>
@@ -55,7 +56,7 @@
 						</div>
 						<div class="col-xs-1"></div>
 						<div class="col-xs-4">
-							<select class="time" id="time">
+							<select class="time" id="time" required>
 								<option selected disabled>Select a Time</option>
 								<option value="1">2:00-2:15pm</option>
 								<option value="2">2:15-2:30pm</option>
@@ -95,13 +96,18 @@
 								</div>
 							</div>
 
-						<div id="radiobtns">
-							<div class="col-xs-6"><input type="radio" name="type" value="Public" checked>Public</div>
-							<div class="col-xs-6"><input type="radio" name="type" value="Private">Private</div>
+						<div class="row" align="center">
+							<div class="btn-group" data-toggle="buttons" id="radiobtns">
+							<label class="btn btn-primary active">
+								<input type="radio" name="type" value="Public" data-toggle="buttons" id="publicbtn" checked>Public
+							</label>
+							<label class="btn btn-primary">
+								<input type="radio" name="type" value="Private" data-toggle="buttons" id="privatebtn">Private
+							</label>							
 						</div>
+					</div>
 					</form>
-					<br>
-					<center><input type="submit" value="Submit" class="smallbtn" id="submit"></center><br>
+					<center><input type="submit" data-toggle="popover" value="Submit" class="smallbtn" id="submit"></center><br>
 				</form>
 			</div>
 		</div>
@@ -136,7 +142,6 @@
       					<script>
       						var email = readCookie("email");
       						var contained = 0;
-      						console.log(email);
 
       						{{#each owner}}
       							if (email == "{{this}}"){
@@ -187,6 +192,32 @@
          	</div>
          	<br>
          	<div align="center">You will be redirected in a moment...</div>
+    	</div>
+	</div>
+
+	<div id="submiterror">						
+		<div id="errordiv">
+			<br>
+			<div id="errclose">
+				<span class="glyphicon glyphicon-remove version_b" onclick="closeerr()" aria-hidden="true"></span>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4>Please fill out the following fields:</h4>
+				</div>
+			</div>
+			<br>
+         	<div class="row">
+         		<div class="col-xs-12" align="left">
+         		<ul>
+         			<li id="errdateli"><span>Select a Date</span></li>
+         			<li id="errtimeli"><span>Select a Time</span></li>
+         			<li id="errnameli"><span>Please enter a name</span></li>
+         			<li id="errdescli"><span>Please enter a description</span></li>
+         		</ul>
+         	</div>
+         	</div>
+         	<br>
     	</div>
 	</div>
 		

@@ -11,17 +11,8 @@ exports.view = function(req, res){
 		.exec(renderAppointments);
 
 	function renderAppointments(err, allapt) {
-//		res.render('viewschedule', { 'allapt': allapt });
-	  var random_num = Math.random();
-
-    if(random_num > 0.5){
-      res.render('viewschedule', { 'allapt': allapt });
-    }
-    else{
-      res.render('viewaltschedule', { 'allapt': allapt });
-    }
-
-  }
+    res.render('viewaltschedule', { 'allapt': allapt });
+	}
 };
 
 exports.addAppointment = function(req, res) {

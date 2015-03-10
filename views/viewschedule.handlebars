@@ -13,7 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="css/viewschedule.css">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
-  {{> tracking_code_script}}
 </head>
 
 <body>
@@ -87,10 +86,15 @@
 	         					<p>Public appointments are visible to all other users. By selecting this, any user can join to come along with you to see the professor. You can join other public appointments too!</p>
 	         					<p>Private appointments are only visible to the professor. No other user will see it or be able to join it. You can not see or join other private appointments either.</p>
 	    					 </div>
-						</div>Appointment Type:<br>
-						<div id="radiobtns">
-							<div class="col-xs-6"><input type="radio" name="type" value="Public" checked>Public</div>
-							<div class="col-xs-6"><input type="radio" name="type" value="Private">Private</div>
+						</div>
+						Appointment Type:<br>
+						<div class="btn-group" data-toggle="buttons" id="radiobtns">
+							<label class="btn btn-primary">
+								<input type="radio" name="type" value="Public" checked>Public
+							</label>
+							<label class="btn btn-primary">
+								<input type="radio" name="type" value="Private">Private
+							</label>
 						</div>
 					</form>
 					<br>

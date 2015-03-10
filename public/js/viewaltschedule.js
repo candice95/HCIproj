@@ -3,6 +3,7 @@ var scrollon = false;
 $(document).ready(function() {
 	
 	var $scrollingDiv = $("#submitoverlay");
+	var $errScroll = $("#submiterror");
 
 	$(window).scroll(function(){		
 		if (scrollon){	
@@ -10,53 +11,92 @@ $(document).ready(function() {
 				.stop()
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
 		}		
+		if (scrollon){	
+			$errScroll
+				.stop()
+				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );	
+		}	
 	});
 
 	$( "#submit" ).click(function() {
 		var date = $("#date option:selected").text();
 		var time = $("#time option:selected").text();
-		document.getElementById("aptdate").innerHTML = date;
-		document.getElementById("apttime").innerHTML = time;
+		var name = $('#inputname #name').val();
+		var description = $('#inputname #description').val();
 
-		scrollon = true;
-		var $scrollingDiv = $("#submitoverlay");
-		$scrollingDiv
+		if (date == "Select a Date" || time == "Select a Time" || name == "" || description == ""){
+			
+			
+			
+			
+			if (date == "Select a Date"){
+				//document.getElementById("errdate").innerHTML = "Select a Date";
+				$('#errdateli').show();
+			}
+			if (time == "Select a Time"){
+				//document.getElementById("errtime").innerHTML = "Select a Time";
+				$('#errtimeli').show();
+			}
+			if (name == ""){
+				//document.getElementById("errname").innerHTML = "Please enter a name";
+				$('#errnameli').show();
+			}
+			if (description == ""){
+				//document.getElementById("errdesc").innerHTML = "Please enter a description";
+				$('#errdescli').show();
+			}
+
+
+			scrollon = true;
+			var $errScroll = $("#submiterror");
+			$errScroll
+				.stop()			
+				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );
+			$('#submiterror').css('visibility','visible').hide().fadeIn();
+		
+			return;
+		}
+		else{
+			document.getElementById("aptdate").innerHTML = date;
+			document.getElementById("apttime").innerHTML = time;
+
+			scrollon = true;
+			var $scrollingDiv = $("#submitoverlay");
+			$scrollingDiv
 				.stop()			
 				.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );
 				
-		$('#submitoverlay').css('visibility','visible').hide().fadeIn('slow');
+			$('#submitoverlay').css('visibility','visible').hide().fadeIn('slow');
 
-		var name = $('#inputname #name').val();
-		var email = readCookie("email");
-		var description = $('#inputname #description').val();
-		var type = $("input:radio[name=type]:checked").val();
-		console.log(type);
-		var json = {
-			'date': date,
-			'time': time,
-			'name': name,
-			'email': email,
-			'description': description,
-			'professor': 'Scott Klemmer',
-			'location': 'Atkinson Hall 5204',
-			'type': type,
-			'owner': email,
-			'origowner': 'thisuser'
-		};
+			var name = $('#inputname #name').val();
+			var email = readCookie("email");
+			var description = $('#inputname #description').val();
+			var type = $("input:radio[name=type]:checked").val();
+			var json = {
+				'date': date,
+				'time': time,
+				'name': name,
+				'email': email,
+				'description': description,
+				'professor': 'Scott Klemmer',
+				'location': 'Atkinson Hall 5204',
+				'type': type,
+				'owner': email,
+				'origowner': 'thisuser'
+			};
 
-		setTimeout(function() {
-        	$.post('/viewschedule/new', json, function(){
-				window.location.href = '/viewschedule';
-			});
-    	}, 3000);
+			setTimeout(function() {
+        		$.post('/viewschedule/new', json, function(){
+					window.location.href = '/viewschedule';
+				});
+    		}, 3000);
+		}
 	});
 });
 
 $('.joinbutton').click(function(){
 	var infoID = $(this).closest('.col-xs-4').attr('id');
-	console.log(infoID);
 	var idNumber = infoID.substr('div'.length);
-	console.log(idNumber);
 
 	//$('#'+ infoID).animate({ opacity: 0 });
 	$('#joinbtn' + idNumber).css({
@@ -87,15 +127,28 @@ $('#formbtn').click(function(){
 	}
 });
 
+$('#publicbtn').click(function(){
+	$(this).button('toggle');
+});
+
+$('#privatebtn').click(function(){
+	$(this).button('toggle');
+});
+
 function overlay() {
 	el = document.getElementById("overlay");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-	
-	//add your Woopra tracking code for version A's like button click event
-    woopra.track("b_version_info_click");
 };
 
+function closeerr() {
+	el = document.getElementById("submiterror");
+	el.style.visibility = "hidden";
+	$('#errdateli').hide();
+	$('#errtimeli').hide();
+	$('#errnameli').hide();
+	$('#errdescli').hide();
 
+};
 
 
 
