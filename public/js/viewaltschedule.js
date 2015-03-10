@@ -127,6 +127,11 @@ $('#formbtn').click(function(){
 	}
 });
 
+$('#cancelbtn').click(function(){
+	$('#formbtn').text("Create A New Appointment");
+	$('#dropdowndiv').slideUp(500);	
+});
+
 $('#publicbtn').click(function(){
 	$(this).button('toggle');
 });
